@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import logo from '/images/KuzmaDevComLogo.svg'
 import styles from './Header.module.css'
 function Header() {
   return (
     <header className={styles.headerContainer}>
-      {/* <div className={styles.headerLogo}>
+      <div className={styles.headerLogo}>
         <Link to="/" className={styles.headerLogoLink}>
           <img
             src="/images/KuzmaDevComLogo.svg"
@@ -49,7 +48,7 @@ function Header() {
             </Link>
           </li>
         </ul>
-      </nav> */}
+      </nav>
     </header>
   )
 }
