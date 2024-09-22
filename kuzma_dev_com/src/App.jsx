@@ -10,8 +10,6 @@ import Contact from './pages/Contact/Contact.jsx'
 import Blog from './pages/Blog/Blog.jsx'
 import Resume from './pages/Resume/Resume.jsx'
 
-import styles from './App.module.css'
-
 function App() {
   return (
     <Router>

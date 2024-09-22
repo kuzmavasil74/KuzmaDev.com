@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '/images/KuzmaDevComLogo.svg'
+// import logo from '/images/KuzmaDevComLogo.svg'
 import styles from './Header.module.css'
 function Header() {
   return (
@@ -8,7 +8,7 @@ function Header() {
       <div className={styles.headerLogo}>
         <Link to="/" className={styles.headerLogoLink}>
           <img
-            src={logo}
+            src="/images/KuzmaDevComLogo.svg"
             alt="KuzmaDev Logo"
             width="80px"
             className={styles.headerLogoImage}
