@@ -1,8 +1,165 @@
 .home {
-  background-image: linear-gradient(135deg, #edf3f8, #eaeef7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
 
-  background-size: cover;
-  /* width: 100%;
-  height: 100%; */
-  height: 700px;
+.homeSectionHero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.homeSectionHeroTitle {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.homeSectionHeroDescription {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.75;
+  color: #e0f2f1;
+}
+
+.homeSectionAbout,
+.homeSectionProjects,
+.homeSectionSkills,
+.homeSectionContact {
+  width: 100%;
+  max-width: 1200px;
+  padding: 80px 20px;
+  margin-bottom: 60px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.homeSectionAboutTitle,
+.homeSectionProjectsTitle,
+.homeSectionSkillsTitle,
+.homeSectionContactTitle {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #388e3c;
+}
+
+.homeSectionAboutDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.homeSectionProjectsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  gap: 20px;
+}
+
+.homeSectionProjectsCard {
+  background-color: #fff;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homeSectionProjectsCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.homeSectionProjectsCardImage {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.homeSectionProjectsCardTitle {
+  font-size: 1.4rem;
+  margin: 20px;
+  font-weight: 700;
+}
+
+.homeSectionProjectsCardDescription {
+  padding: 0 20px 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.homeSectionProjectsCardLink {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0 0 10px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.homeSectionProjectsCardLink:hover {
+  background-color: #388e3c;
+}
+
+.homeSectionSkillsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.homeSectionSkillsListItem {
+  background-color: #66bb6a;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.homeSectionContact {
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 80px 20px;
+  border-radius: 10px;
+}
+
+.homeSectionContactDescription {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.75;
+}
+
+.homeSectionContactLink {
+  font-size: 1.3rem;
+  background-color: #ffffff;
+  color: #4caf50;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.homeSectionContactLink:hover {
+  background-color: #e0e0e0;
+  color: #388e3c;
 }
