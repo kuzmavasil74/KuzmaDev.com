@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import styles from './Footer.module.css'
+
 function Footer() {
   return (
     <footer className={styles.footerContainer}>
@@ -66,9 +66,7 @@ function Footer() {
           </li>
           <li>
             <a
-              href="tel:+420 776 788 319"
-              target="_blank"
-              rel="noreferrer"
+              href="tel:+420776788319"
               className={styles.footerSocialLinksListItem}
             >
               <img
@@ -82,8 +80,6 @@ function Footer() {
           <li>
             <a
               href="mailto:kuzmavasil.v@gmail.com"
-              target="_blank"
-              rel="noreferrer"
               className={styles.footerSocialLinksListItem}
             >
               <img
@@ -99,4 +95,5 @@ function Footer() {
     </footer>
   )
 }
+
 export default Footer

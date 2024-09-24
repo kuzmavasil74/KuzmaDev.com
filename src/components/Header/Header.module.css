@@ -2,34 +2,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px 0 10px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  padding: 0 10px;
+  background-color: #e0f7fa;
+  border-bottom: 1px solid #b2ebf2;
   color: #333;
   width: 100%;
   box-sizing: border-box;
 }
+
+/* Logo Styles */
 .headerLogo {
   flex: 1;
   display: flex;
   justify-content: flex-start;
 }
+
 .headerLogo:hover {
   cursor: pointer;
 }
-/* .headerLogoLink {
-} */
+
 .headerLogoImage {
   max-width: 100%;
   height: auto;
 }
-/* .headerChangeLanguage {
-} */
+
+/* Navigation Styles */
 .headerNav {
   display: flex;
   flex: 7;
   justify-content: space-between;
 }
+
 .headerNavList {
   display: flex;
   list-style: none;
@@ -38,8 +41,54 @@
   flex: 1;
   justify-content: space-between;
 }
+
 .headerNavListItem {
-  color: #000;
+  color: #006064;
   text-decoration: none;
   padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.headerNavListItem:hover {
+  color: #004d40;
+}
+
+/* Media Queries for Mobile and Tablet Devices */
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .headerNav {
+    flex-direction: column; /* Stack navigation items */
+    width: 100%; /* Full width for mobile */
+    margin-top: 10px; /* Add some spacing */
+  }
+
+  .headerNavList {
+    flex-direction: column; /* Vertical list on mobile */
+    align-items: flex-start; /* Align items to the start */
+    width: 100%; /* Full width for list */
+  }
+
+  .headerNavListItem {
+    padding: 10px 0; /* Add vertical padding for better touch targets */
+    width: 100%; /* Full width for items */
+    text-align: left; /* Align text to the left */
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    padding: 0 5px; /* Reduced padding for smaller screens */
+  }
+
+  .headerNavListItem {
+    padding: 8px 0; /* Slightly smaller padding */
+  }
+
+  .headerLogoImage {
+    width: 70px; /* Adjust logo size for smaller screens */
+  }
 }
