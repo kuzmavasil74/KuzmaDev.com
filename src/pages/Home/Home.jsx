@@ -16,11 +16,16 @@ function Home() {
       </p>
 
       <section className={styles.homeSectionAbout}>
-        <h2 className={styles.homeSectionAboutTitle}>About Me</h2>
+        <h2 className={styles.homeSectionAboutTitle}>Vasyl Kuzma</h2>
+        <img
+          className={styles.homeSectionAboutImage}
+          src="/images/Avatar_Kuzma_Vasyl.png"
+          alt="Avatar_Kuzma_Vasyl.png"
+        />
         <p className={styles.homeSectionAboutDescription}>
-          I'm a full-stack developer specializing in React.js and Node.js, with
-          a passion for building scalable web applications. I focus on
-          delivering clean, efficient code and great user experiences.
+          I'm a Frontend Developer specializing in React.js, with a passion for
+          building scalable web applications. I focus on delivering clean,
+          efficient code and great user experiences.
         </p>
       </section>
 
@@ -29,68 +34,129 @@ function Home() {
         <ul className={styles.homeSectionProjectsList}>
           <li className={styles.homeSectionProjectsCard}>
             <img
-              src=""
-              alt=""
+              src="/images/projects/webstudio.jpg"
+              alt="webstudio.jpg"
               className={styles.homeSectionProjectsCardImage}
             />
-            <h3 className={styles.homeSectionProjectsCardTitle}>
-              First Project
-            </h3>
+            <h3 className={styles.homeSectionProjectsCardTitle}>WebStudio</h3>
             <p className={styles.homeSectionProjectsCardDescription}>
-              A brief description of the project goes here.
+              - A professional website for a WebStudio company featuring
+              responsive design, transform effects, and modal windows. Role:
+              Developer. Individual project.
             </p>
-            <a href="" className={styles.homeSectionProjectsCardLink}>
+            <a
+              href="https://kuzmavasil74.github.io/goit-markup-hw-08/"
+              className={styles.homeSectionProjectsCardLink}
+            >
               Learn More
             </a>
           </li>
 
           <li className={styles.homeSectionProjectsCard}>
             <img
-              src=""
-              alt=""
+              src="/images/projects/bestsellersbooks.jpg"
+              alt="bestsellersbooks.jpg"
               className={styles.homeSectionProjectsCardImage}
             />
             <h3 className={styles.homeSectionProjectsCardTitle}>
-              Second Project
+              Best Sellers Books
             </h3>
             <p className={styles.homeSectionProjectsCardDescription}>
-              A brief description of the project goes here.
+              - A dynamic website for a book product company with adaptive
+              design, animations, modal windows, and a burger menu for ordering.
+              Role: Scrum Master, Developer of the All Categories Section.
             </p>
-            <a href="" className={styles.homeSectionProjectsCardLink}>
+            <a
+              href="https://volodymyrkozel.github.io/renderrangers/"
+              className={styles.homeSectionProjectsCardLink}
+            >
               Learn More
             </a>
           </li>
 
           <li className={styles.homeSectionProjectsCard}>
             <img
-              src=""
-              alt=""
+              src="/images/projects/moviesearch.jpg"
+              alt="moviesearch.jpg"
               className={styles.homeSectionProjectsCardImage}
             />
             <h3 className={styles.homeSectionProjectsCardTitle}>
-              Third Project
+              Movie Search
             </h3>
             <p className={styles.homeSectionProjectsCardDescription}>
-              A brief description of the project goes here.
+              - A movie search application with routing to search for movies by
+              title. Implemented advanced state management and optimized API
+              interactions. Role: Sole Developer. Individual project.
             </p>
-            <a href="" className={styles.homeSectionProjectsCardLink}>
+            <a
+              href="https://goit-react-hw-05-azure-mu.vercel.app/"
+              className={styles.homeSectionProjectsCardLink}
+            >
               Learn More
             </a>
           </li>
 
           <li className={styles.homeSectionProjectsCard}>
             <img
-              src=""
-              alt=""
+              src="/images/projects/contactsbooks.jpg"
+              alt="contactsbooks.jpg"
               className={styles.homeSectionProjectsCardImage}
             />
             <h3 className={styles.homeSectionProjectsCardTitle}>
-              Fourth Project
+              Contacts Book
             </h3>
             <p className={styles.homeSectionProjectsCardDescription}>
-              A brief description of the project goes here.
+              - A "Contact Book" application with registration and login
+              functionalities, managing a private collection of contacts.
+              Utilized secure authentication and optimized data handling.
             </p>
-            <a href="" className={styles.homeSectionProjectsCardLink}>
+            <a
+              href="https://goit-react-hw-08-lac-chi.vercel.app/"
+              className={styles.homeSectionProjectsCardLink}
+            >
+              Learn More
+            </a>
+          </li>
+          <li className={styles.homeSectionProjectsCard}>
+            <img
+              src="/images/projects/trackerofwater.jpg"
+              alt="trackerofwater.jpg"
+              className={styles.homeSectionProjectsCardImage}
+            />
+            <h3 className={styles.homeSectionProjectsCardTitle}>
+              Trecker of Water
+            </h3>
+            <p className={styles.homeSectionProjectsCardDescription}>
+              - This project is designed to provide users with a simple and
+              effective tool for monitoring water consumption. The app's
+              interface is intuitive, allowing for quick setup of health goals.
+            </p>
+            <a
+              href="https://team-project-watter-app.vercel.app/"
+              className={styles.homeSectionProjectsCardLink}
+            >
+              Learn More
+            </a>
+          </li>
+          <li className={styles.homeSectionProjectsCard}>
+            <img
+              src="/images/projects/taisiyastyle.jpg"
+              alt="taisiyastyle.jpg"
+              className={styles.homeSectionProjectsCardImage}
+            />
+            <h3 className={styles.homeSectionProjectsCardTitle}>
+              TaisiyaStyle
+            </h3>
+            <p className={styles.homeSectionProjectsCardDescription}>
+              Developed TaisiyaStyle.com, a personal website for a hairdresser
+              using React, featuring responsive design and an intuitive booking
+              form. Currently working on the backend with MongoDB to enable
+              appointment scheduling.
+            </p>
+            <a
+              href="https://taisiyastyle.vercel.app/"
+              className={styles.homeSectionProjectsCardLink}
+            >
               Learn More
             </a>
           </li>

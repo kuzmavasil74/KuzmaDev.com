@@ -30,6 +30,21 @@
   line-height: 1.75;
   color: #e0f2f1;
 }
+.homeSectionAboutImage {
+  display: block;
+  justify-content: center;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.homeSectionAboutImage:hover {
+  transform: scale(1.05);
+}
 
 /* Section Styles */
 .homeSectionAbout,
@@ -65,16 +80,19 @@
 
 /* Project List Styles */
 .homeSectionProjectsList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   gap: 20px;
 }
 
 .homeSectionProjectsCard {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
-  width: 280px;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -99,12 +117,16 @@
 }
 
 .homeSectionProjectsCardDescription {
-  padding: 0 20px 20px;
-  font-size: 16px;
-  color: #666;
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .homeSectionProjectsCardLink {
+  margin-top: auto;
   display: block;
   text-align: center;
   padding: 15px;
