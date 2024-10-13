@@ -84,7 +84,74 @@
     font-size: 25px;
   }
 }
-
+/* Social Media */
+.homeNavSocialMedia {
+  position: absolute;
+  top: 0%;
+  left: -95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  right: 20px;
+}
+.homeNavSocialMediaList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.homeNavSocialMediaListItem {
+  list-style: none;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.homeNavSocialMediaListItem:hover {
+  opacity: 1;
+}
+.homeNavSocialMediaListItemLink {
+  text-decoration: none;
+}
+.homeNavSocialMediaListItemLinkImg {
+  width: 20px;
+}
+/* Contacts Nav */
+.homeContactsNav {
+  position: absolute;
+  top: 75%;
+  right: -65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  left: 20px;
+}
+.homeContactsNavList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.homeContactsNavListItem {
+  list-style: none;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.homeContactsNavListItem:hover {
+  opacity: 1;
+}
+.homeContactsNavListItemLink {
+  text-decoration: none;
+}
+.homeContactsNavListItemLinkImg {
+  width: 20px;
+}
 /* Медіа-запити для мобільних пристроїв */
 @media (max-width: 768px) {
   .homeContent {

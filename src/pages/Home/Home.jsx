@@ -130,6 +130,108 @@ function Home() {
           </span>
         </p>
       </div>
+      <nav className={styles.homeNavSocialMedia}>
+        <ul className={styles.homeNavSocialMediaList}>
+          <li className={styles.homeNavSocialMediaListItem}>
+            <a
+              href="https://www.instagram.com/kuzmavasil"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.homeNavSocialMediaListItemLink}
+            >
+              <img
+                src="/images/instagramLogo.svg"
+                alt="instagram-link"
+                className={styles.homeNavSocialMediaListItemLinkImg}
+              />
+            </a>
+          </li>
+          <li className={styles.homeNavSocialMediaListItem}>
+            <a
+              href="https://www.facebook.com/vova.muka.1"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.homeNavSocialMediaListItemLink}
+            >
+              <img
+                src="/images/facebookLogo.svg"
+                alt="facebook-link"
+                className={styles.homeNavSocialMediaListItemLinkImg}
+              />
+            </a>
+          </li>
+          <li className={styles.homeNavSocialMediaListItem}>
+            <a
+              href="https://www.linkedin.com/in/vasylkuzma"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.homeNavSocialMediaListItemLink}
+            >
+              <img
+                src="/images/linkedinLogo.svg"
+                alt="LinkedIn-link"
+                className={styles.homeNavSocialMediaListItemLinkImg}
+              />
+            </a>
+          </li>
+          <li className={styles.homeNavSocialMediaListItem}>
+            <a
+              href="https://github.com/kuzmavasil74"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.homeNavSocialMediaListItemLink}
+            >
+              <img
+                src="/images/gitHubLogo.svg"
+                alt="github-link"
+                className={styles.homeNavSocialMediaListItemLinkImg}
+              />
+            </a>
+          </li>
+          <li className={styles.homeNavSocialMediaListItem}>
+            <a
+              href="https://t.me/Vasyl_Kuzma"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.homeNavSocialMediaListItemLink}
+            >
+              <img
+                src="/images/telegramLogo.svg"
+                alt="telegram-link"
+                className={styles.homeNavSocialMediaListItemLinkImg}
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav className={styles.homeContactsNav}>
+        <ul className={styles.homeContactsNavList}>
+          <li className={styles.homeContactsNavListItem}>
+            <a
+              href="tel:+420776788319"
+              className={styles.homeContactsNavListItemLink}
+            >
+              <img
+                src="/images/telephoneLogo.png"
+                alt="telephone-link"
+                className={styles.homeContactsNavListItemLinkImg}
+              />
+            </a>
+          </li>
+          <li className={styles.homeContactsNavListItem}>
+            <a
+              href="mailto:kuzmavasil.v@gmail.com"
+              className={styles.homeContactsNavListItemLink}
+            >
+              <img
+                src="/images/mailLogo.svg"
+                alt="mail-link"
+                className={styles.homeContactsNavListItemLinkImg}
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   )
 }
