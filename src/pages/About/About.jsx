@@ -70,7 +70,7 @@ function About() {
             <div className={styles.serviceCardImageContainer}>
               <img
                 className={styles.serviceCardImage}
-                src="/public/images/about/icons8-frontend-development-64.png"
+                src="/images/about/icons8-frontend-development-64.png"
                 alt="Frontend Development"
               />
             </div>
@@ -84,7 +84,7 @@ function About() {
             <div className={styles.serviceCardImageContainer}>
               <img
                 className={styles.serviceCardImage}
-                src="/public/images/about/icons8-design-50.png"
+                src="/images/about/icons8-design-50.png"
                 alt="UI/UX Design"
               />
             </div>
@@ -98,7 +98,7 @@ function About() {
             <div className={styles.serviceCardImageContainer}>
               <img
                 className={styles.serviceCardImage}
-                src="/public/images/about/icons8-responsive-design-50.png"
+                src="/images/about/icons8-responsive-design-50.png"
                 alt="Responsive Design"
               />
             </div>
@@ -112,7 +112,7 @@ function About() {
             <div className={styles.serviceCardImageContainer}>
               <img
                 className={styles.serviceCardImage}
-                src="/public/images/about/icons8-backend-development-64.png"
+                src="/images/about/icons8-backend-development-64.png"
                 alt="Backend Development"
               />
             </div>
@@ -126,7 +126,7 @@ function About() {
             <div className={styles.serviceCardImageContainer}>
               <img
                 className={styles.serviceCardImage}
-                src="/public/images/about/icons8-performance-smartphone-80.png"
+                src="/images/about/icons8-performance-smartphone-80.png"
                 alt="Performance Optimization"
               />
             </div>
@@ -142,7 +142,7 @@ function About() {
             <div className={styles.serviceCardImageContainer}>
               <img
                 className={styles.serviceCardImage}
-                src="/public/images/about/icons8-collaboration-50.png"
+                src="/images/about/icons8-collaboration-50.png"
                 alt="Collaboration & Agile"
               />
             </div>
