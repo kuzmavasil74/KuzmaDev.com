@@ -1,94 +1,169 @@
 .headerContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 10px;
-  background-color: #e0f7fa;
-  border-bottom: 1px solid #b2ebf2;
-  color: #333;
+  position: fixed;
+  height: 40px;
   width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 3;
 }
 
 /* Logo Styles */
-.headerLogo {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.headerLogo:hover {
-  cursor: pointer;
+.headerLogoLink {
+  position: relative;
+  top: 16px;
+  left: 1rem;
 }
 
 .headerLogoImage {
-  max-width: 100%;
-  height: auto;
+  opacity: 0.7;
+  transition: all 0.4s ease;
 }
 
-/* Navigation Styles */
-.headerNav {
+.headerLogoImage:hover {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+/* Menu Button Styles */
+.headerMenuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
   display: flex;
-  flex: 7;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+
+.headerMenuButton.hidden {
+  display: none;
+}
+
+.firstBurgerLine,
+.secondBurgerLine,
+.thirdBurgerLine {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  opacity: 0.7;
+  margin: 3px 0;
+  align-self: flex-end;
+}
+
+.firstBurgerLine {
+  width: 10px;
+}
+
+.secondBurgerLine {
+  width: 20px;
+}
+
+.headerMenuButton:hover .firstBurgerLine,
+.headerMenuButton:hover .secondBurgerLine,
+.headerMenuButton:hover .thirdBurgerLine {
+  opacity: 0.7;
+  width: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Menu Styles */
+.headerNav {
+  display: none;
+}
+
+.headerNav.open {
+  background: #171717;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
 }
 
 .headerNavList {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-  margin: 0;
   padding: 0;
-  flex: 1;
-  justify-content: space-between;
 }
 
 .headerNavListItem {
-  color: #006064;
+  font-family: 'Poppins', sans-serif;
+  margin: 1rem 0;
+  color: #fff;
+  text-align: center;
   text-decoration: none;
-  padding: 10px;
-  transition: color 0.3s ease;
+  opacity: 0.7;
 }
 
-.headerNavListItem:hover {
-  color: #004d40;
+/* Close Button */
+.headerCloseButton {
+  position: absolute;
+  top: 5%;
+  right: 2rem;
+  background: #171717;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.4s ease;
+  opacity: 0.7;
 }
 
-/* Media Queries for Mobile and Tablet Devices */
-@media (max-width: 768px) {
-  .headerContainer {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
-  }
+.headerCloseButton:hover {
+  transform: rotate(-45deg);
+}
 
+/* Desktop Styles */
+@media (min-width: 768px) {
   .headerNav {
-    flex-direction: column; /* Stack navigation items */
-    width: 100%; /* Full width for mobile */
-    margin-top: 10px; /* Add some spacing */
+    display: none;
   }
 
   .headerNavList {
-    flex-direction: column; /* Vertical list on mobile */
-    align-items: flex-start; /* Align items to the start */
-    width: 100%; /* Full width for list */
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
   }
 
-  .headerNavListItem {
-    padding: 10px 0; /* Add vertical padding for better touch targets */
-    width: 100%; /* Full width for items */
-    text-align: left; /* Align text to the left */
-  }
-}
-
-@media (max-width: 480px) {
-  .headerContainer {
-    padding: 0 5px; /* Reduced padding for smaller screens */
-  }
-
-  .headerNavListItem {
-    padding: 8px 0; /* Slightly smaller padding */
+  .headerNavListItemLink {
+    position: relative;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    text-align: center;
+    z-index: 2;
   }
 
-  .headerLogoImage {
-    width: 70px; /* Adjust logo size for smaller screens */
+  .headerNavListItemLink::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100px;
+    font-weight: 400;
+    font-family: 'Poppins';
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    letter-spacing: 50px;
+    transition: transform 1s ease, opacity 0.1s ease, letter-spacing 1s ease;
+  }
+
+  .headerNavListItemLink:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: 10px;
   }
 }

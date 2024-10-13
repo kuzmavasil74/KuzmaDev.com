@@ -1,54 +1,113 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const closeButtonRef = useRef(null)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
+  useEffect(() => {
+    if (isMenuOpen && closeButtonRef.current) {
+      closeButtonRef.current.addEventListener('click', closeMenu)
+    }
+    return () => {
+      if (closeButtonRef.current) {
+        closeButtonRef.current.removeEventListener('click', closeMenu)
+      }
+    }
+  }, [isMenuOpen])
+
   return (
     <header className={styles.headerContainer}>
-      <div className={styles.headerLogo}>
-        <Link to="/" className={styles.headerLogoLink}>
-          <img
-            src="/images/KuzmaDevComLogo.svg"
-            alt="KuzmaDev Logo"
-            width="80px"
-            className={styles.headerLogoImage}
-          />
-        </Link>
-      </div>
+      <Link to="/" className={styles.headerLogoLink}>
+        <img
+          src="/images/KuzmaDevComLogo.png"
+          alt="KuzmaDevLogo"
+          width="60px"
+          height="60px"
+          className={styles.headerLogoImage}
+        />
+      </Link>
+
       <div className={styles.headerChangeLanguage}></div>
-      <nav className={styles.headerNav}>
+
+      <button
+        className={`${styles.headerMenuButton} ${
+          isMenuOpen ? styles.hidden : ''
+        }`}
+        onClick={toggleMenu}
+      >
+        <span className={styles.firstBurgerLine}></span>
+        <span className={styles.secondBurgerLine}></span>
+        <span className={styles.thirdBurgerLine}></span>
+      </button>
+      <nav className={`${styles.headerNav} ${isMenuOpen ? styles.open : ''}`}>
         <ul className={styles.headerNavList}>
-          <li>
-            <Link to="/about" className={styles.headerNavListItem}>
+          <li className={styles.headerNavListItem}>
+            <Link
+              to="/"
+              className={styles.headerNavListItemLink}
+              onClick={toggleMenu}
+              data-text="Home"
+            >
+              Home
+            </Link>
+          </li>
+          <li className={styles.headerNavListItem}>
+            <Link
+              to="/about"
+              className={styles.headerNavListItemLink}
+              onClick={toggleMenu}
+              data-text="About"
+            >
               About
             </Link>
           </li>
-          <li>
-            <Link to="/projects" className={styles.headerNavListItem}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="/skills" className={styles.headerNavListItem}>
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className={styles.headerNavListItem}>
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog" className={styles.headerNavListItem}>
+          <li className={styles.headerNavListItem}>
+            <Link
+              to="/blog"
+              className={styles.headerNavListItemLink}
+              onClick={toggleMenu}
+              data-text="Blog"
+            >
               Blog
             </Link>
           </li>
-          <li>
-            <Link to="/resume" className={styles.headerNavListItem}>
-              Resume
+          <li className={styles.headerNavListItem}>
+            <Link
+              to="/portfolio"
+              className={styles.headerNavListItemLink}
+              onClick={toggleMenu}
+              data-text="Portfolio"
+            >
+              Portfolio
+            </Link>
+          </li>
+          <li className={styles.headerNavListItem}>
+            <Link
+              to="/contact"
+              className={styles.headerNavListItemLink}
+              onClick={toggleMenu}
+              data-text="Contact"
+            >
+              Contact
             </Link>
           </li>
         </ul>
+        <button
+          ref={closeButtonRef}
+          className={styles.headerCloseButton}
+          aria-label="Close Menu"
+        >
+          <img src="/images/close.png" alt="close" width="40px" height="40px" />
+        </button>
       </nav>
     </header>
   )

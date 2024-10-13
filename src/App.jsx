@@ -1,8 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home.jsx'
-import Header from './components/Header/Header.jsx'
-import Footer from './components/Footer/Footer.jsx'
 import About from './pages/About/About.jsx'
 import Projects from './pages/Projects/Projects.jsx'
 import Skills from './pages/Skills/Skills.jsx'
@@ -13,7 +11,6 @@ import Resume from './pages/Resume/Resume.jsx'
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
@@ -24,7 +21,6 @@ function App() {
         <Route path="/resume" element={<Resume />}></Route>
         <Route path="*" element={<Home />}></Route>
       </Routes>
-      <Footer />
     </Router>
   )
 }

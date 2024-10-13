@@ -1,207 +1,135 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from './Home.module.css'
+import Header from '../../components/Header/Header'
 
 function Home() {
+  const canvasRef = useRef(null)
+
+  const opts = {
+    particleColor: 'rgb(200,200,200)',
+    lineColor: 'rgb(200,200,200)',
+    particleAmount: 30,
+    defaultSpeed: 1,
+    variantSpeed: 1,
+    defaultRadius: 2,
+    variantRadius: 2,
+    linkRadius: 200,
+  }
+
+  useEffect(() => {
+    const canvasBody = canvasRef.current
+    const drawArea = canvasBody.getContext('2d')
+
+    const parentElement = canvasBody.parentElement
+    let w = (canvasBody.width = parentElement.clientWidth)
+    let h = (canvasBody.height = parentElement.clientHeight)
+
+    const resizeReset = () => {
+      w = canvasBody.width = window.innerWidth
+      h = canvasBody.height = window.innerHeight
+    }
+
+    let particles = []
+
+    // Particle class
+    function Particle() {
+      this.x = Math.random() * w
+      this.y = Math.random() * h
+      this.speed = opts.defaultSpeed + Math.random() * opts.variantSpeed
+      this.directionAngle = Math.floor(Math.random() * 360)
+      this.color = opts.particleColor
+      this.radius = opts.defaultRadius + Math.random() * opts.variantRadius
+      this.vector = {
+        x: Math.cos(this.directionAngle) * this.speed,
+        y: Math.sin(this.directionAngle) * this.speed,
+      }
+      this.update = function () {
+        this.border()
+        this.x += this.vector.x
+        this.y += this.vector.y
+      }
+      this.border = function () {
+        if (this.x >= w || this.x <= 0) {
+          this.vector.x *= -1
+        }
+        if (this.y >= h || this.y <= 0) {
+          this.vector.y *= -1
+        }
+      }
+      this.draw = function () {
+        drawArea.beginPath()
+        drawArea.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+        drawArea.closePath()
+        drawArea.fillStyle = this.color
+        drawArea.fill()
+      }
+    }
+
+    const linkPoints = (point1, hubs) => {
+      for (let i = 0; i < hubs.length; i++) {
+        let distance = Math.sqrt(
+          Math.pow(point1.x - hubs[i].x, 2) + Math.pow(point1.y - hubs[i].y, 2)
+        )
+        let opacity = 1 - distance / opts.linkRadius
+        if (opacity > 0) {
+          drawArea.lineWidth = 0.5
+          drawArea.strokeStyle = `rgba(${opts.lineColor
+            .match(/\d+/g)
+            .join(', ')}, ${opacity})`
+          drawArea.beginPath()
+          drawArea.moveTo(point1.x, point1.y)
+          drawArea.lineTo(hubs[i].x, hubs[i].y)
+          drawArea.closePath()
+          drawArea.stroke()
+        }
+      }
+    }
+
+    const setup = () => {
+      particles = []
+      resizeReset()
+      for (let i = 0; i < opts.particleAmount; i++) {
+        particles.push(new Particle())
+      }
+      window.requestAnimationFrame(loop)
+    }
+
+    const loop = () => {
+      window.requestAnimationFrame(loop)
+      drawArea.clearRect(0, 0, w, h)
+      particles.forEach((particle) => {
+        particle.update()
+        particle.draw()
+      })
+      particles.forEach((particle) => {
+        linkPoints(particle, particles)
+      })
+    }
+
+    setup()
+    window.addEventListener('resize', resizeReset)
+
+    return () => {
+      window.removeEventListener('resize', resizeReset)
+    }
+  }, [])
+
   return (
     <div className={styles.home}>
-      <section className={styles.homeSectionHero}>
-        <h1 className={styles.homeSectionHeroTitle}>
-          Transforming Ideas into Scalable Web Applications
+      <Header />
+      <canvas ref={canvasRef} id="canvas"></canvas>
+      <div className={styles.homeContent}>
+        <h1 className={styles.homeTitle}>
+          Vasyl <span className={styles.homeSpanTitle}>Kuzma</span>
         </h1>
-      </section>
-      <p className={styles.homeSectionHeroDescription}>
-        From front-end design to back-end architecture, I'm dedicated to
-        crafting high-quality, functional, and visually appealing web
-        experiences.
-      </p>
-
-      <section className={styles.homeSectionAbout}>
-        <h2 className={styles.homeSectionAboutTitle}>Vasyl Kuzma</h2>
-        <img
-          className={styles.homeSectionAboutImage}
-          src="/images/Avatar_Kuzma_Vasyl.png"
-          alt="Avatar_Kuzma_Vasyl.png"
-        />
-        <p className={styles.homeSectionAboutDescription}>
-          I'm a Frontend Developer specializing in React.js, with a passion for
-          building scalable web applications. I focus on delivering clean,
-          efficient code and great user experiences.
+        <p className={styles.homeDescription}>
+          I am a{' '}
+          <span className={styles.homeSpanDescription}>
+            {' '}
+            Frontend Developer
+          </span>
         </p>
-      </section>
-
-      <section className={styles.homeSectionProjects}>
-        <h2 className={styles.homeSectionProjectsTitle}>Recent Projects</h2>
-        <ul className={styles.homeSectionProjectsList}>
-          <li className={styles.homeSectionProjectsCard}>
-            <img
-              src="/images/projects/webstudio.jpg"
-              alt="webstudio.jpg"
-              className={styles.homeSectionProjectsCardImage}
-            />
-            <h3 className={styles.homeSectionProjectsCardTitle}>WebStudio</h3>
-            <p className={styles.homeSectionProjectsCardDescription}>
-              - A professional website for a WebStudio company featuring
-              responsive design, transform effects, and modal windows. Role:
-              Developer. Individual project.
-            </p>
-            <a
-              href="https://kuzmavasil74.github.io/goit-markup-hw-08/"
-              className={styles.homeSectionProjectsCardLink}
-            >
-              Learn More
-            </a>
-          </li>
-
-          <li className={styles.homeSectionProjectsCard}>
-            <img
-              src="/images/projects/bestsellersbooks.jpg"
-              alt="bestsellersbooks.jpg"
-              className={styles.homeSectionProjectsCardImage}
-            />
-            <h3 className={styles.homeSectionProjectsCardTitle}>
-              Best Sellers Books
-            </h3>
-            <p className={styles.homeSectionProjectsCardDescription}>
-              - A dynamic website for a book product company with adaptive
-              design, animations, modal windows, and a burger menu for ordering.
-              Role: Scrum Master, Developer of the All Categories Section.
-            </p>
-            <a
-              href="https://volodymyrkozel.github.io/renderrangers/"
-              className={styles.homeSectionProjectsCardLink}
-            >
-              Learn More
-            </a>
-          </li>
-
-          <li className={styles.homeSectionProjectsCard}>
-            <img
-              src="/images/projects/moviesearch.jpg"
-              alt="moviesearch.jpg"
-              className={styles.homeSectionProjectsCardImage}
-            />
-            <h3 className={styles.homeSectionProjectsCardTitle}>
-              Movie Search
-            </h3>
-            <p className={styles.homeSectionProjectsCardDescription}>
-              - A movie search application with routing to search for movies by
-              title. Implemented advanced state management and optimized API
-              interactions. Role: Sole Developer. Individual project.
-            </p>
-            <a
-              href="https://goit-react-hw-05-azure-mu.vercel.app/"
-              className={styles.homeSectionProjectsCardLink}
-            >
-              Learn More
-            </a>
-          </li>
-
-          <li className={styles.homeSectionProjectsCard}>
-            <img
-              src="/images/projects/contactsbooks.jpg"
-              alt="contactsbooks.jpg"
-              className={styles.homeSectionProjectsCardImage}
-            />
-            <h3 className={styles.homeSectionProjectsCardTitle}>
-              Contacts Book
-            </h3>
-            <p className={styles.homeSectionProjectsCardDescription}>
-              - A "Contact Book" application with registration and login
-              functionalities, managing a private collection of contacts.
-              Utilized secure authentication and optimized data handling.
-            </p>
-            <a
-              href="https://goit-react-hw-08-lac-chi.vercel.app/"
-              className={styles.homeSectionProjectsCardLink}
-            >
-              Learn More
-            </a>
-          </li>
-          <li className={styles.homeSectionProjectsCard}>
-            <img
-              src="/images/projects/trackerofwater.jpg"
-              alt="trackerofwater.jpg"
-              className={styles.homeSectionProjectsCardImage}
-            />
-            <h3 className={styles.homeSectionProjectsCardTitle}>
-              Trecker of Water
-            </h3>
-            <p className={styles.homeSectionProjectsCardDescription}>
-              - This project is designed to provide users with a simple and
-              effective tool for monitoring water consumption. The app's
-              interface is intuitive, allowing for quick setup of health goals.
-            </p>
-            <a
-              href="https://team-project-watter-app.vercel.app/"
-              className={styles.homeSectionProjectsCardLink}
-            >
-              Learn More
-            </a>
-          </li>
-          <li className={styles.homeSectionProjectsCard}>
-            <img
-              src="/images/projects/taisiyastyle.jpg"
-              alt="taisiyastyle.jpg"
-              className={styles.homeSectionProjectsCardImage}
-            />
-            <h3 className={styles.homeSectionProjectsCardTitle}>
-              TaisiyaStyle
-            </h3>
-            <p className={styles.homeSectionProjectsCardDescription}>
-              Developed TaisiyaStyle.com, a personal website for a hairdresser
-              using React, featuring responsive design and an intuitive booking
-              form. Currently working on the backend with MongoDB to enable
-              appointment scheduling.
-            </p>
-            <a
-              href="https://taisiyastyle.vercel.app/"
-              className={styles.homeSectionProjectsCardLink}
-            >
-              Learn More
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <section className={styles.homeSectionSkills}>
-        <h2 className={styles.homeSectionSkillsTitle}>Technical Skills</h2>
-        <ul className={styles.homeSectionSkillsList}>
-          <li className={styles.homeSectionSkillsListItem}>React</li>
-          <li className={styles.homeSectionSkillsListItem}>Node.js</li>
-          <li className={styles.homeSectionSkillsListItem}>MongoDB</li>
-          <li className={styles.homeSectionSkillsListItem}>Express</li>
-          <li className={styles.homeSectionSkillsListItem}>HTML</li>
-          <li className={styles.homeSectionSkillsListItem}>CSS</li>
-          <li className={styles.homeSectionSkillsListItem}>JavaScript</li>
-          <li className={styles.homeSectionSkillsListItem}>Git</li>
-          <li className={styles.homeSectionSkillsListItem}>GitHub</li>
-          <li className={styles.homeSectionSkillsListItem}>Figma</li>
-        </ul>
-
-        <h2 className={styles.homeSectionSkillsTitle}>Soft Skills</h2>
-        <ul className={styles.homeSectionSkillsList}>
-          <li className={styles.homeSectionSkillsListItem}>Leadership</li>
-          <li className={styles.homeSectionSkillsListItem}>Communication</li>
-          <li className={styles.homeSectionSkillsListItem}>Problem-solving</li>
-          <li className={styles.homeSectionSkillsListItem}>Teamwork</li>
-          <li className={styles.homeSectionSkillsListItem}>Creativity</li>
-          <li className={styles.homeSectionSkillsListItem}>Self-motivation</li>
-          <li className={styles.homeSectionSkillsListItem}>Time management</li>
-          <li className={styles.homeSectionSkillsListItem}>Collaboration</li>
-          <li className={styles.homeSectionSkillsListItem}>Adaptability</li>
-        </ul>
-      </section>
-
-      <section className={styles.homeSectionContact}>
-        <h2 className={styles.homeSectionContactTitle}>Contact Me</h2>
-        <p className={styles.homeSectionContactDescription}>
-          If you have any questions, feel free to get in touch. I'd love to hear
-          from you.
-        </p>
-        <a href="" className={styles.homeSectionContactLink}>
-          Contact Me →
-        </a>
-      </section>
+      </div>
     </div>
   )
 }
