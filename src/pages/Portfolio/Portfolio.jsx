@@ -1,9 +1,11 @@
 import React from 'react'
-import styles from './Resume.module.css'
+import Header from '../../components/Header/Header'
 
-function Resume() {
+import styles from './Portfolio.module.css'
+function Portfolio() {
   return (
     <div className={styles.resumecontainer}>
+      <Header />
       <div className={styles.resumecolumn}>
         <h1 className={styles.resumetitle}>Vasyl Kuzma</h1>
         <h2 className={styles.resumesubtitle}>
@@ -223,26 +225,9 @@ function Resume() {
             </em>
           </p>
         </section>
-
-        <section className={styles.resumeButton}>
-          <button
-            type="button"
-            className={styles.downloadButton}
-            onClick={() => {
-              const link = document.createElement('a')
-              link.href = '/Resume/Vasyl_Kuzma_Resume.pdf'
-              link.setAttribute('download', 'Vasyl_Kuzma_Resume.pdf')
-              document.body.appendChild(link)
-              link.click()
-              document.body.removeChild(link)
-            }}
-          >
-            Download Resume
-          </button>
-        </section>
       </div>
     </div>
   )
 }
 
-export default Resume
+export default Portfolio

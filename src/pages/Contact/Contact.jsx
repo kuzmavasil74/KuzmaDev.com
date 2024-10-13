@@ -1,9 +1,11 @@
 import React from 'react'
+import Header from '../../components/Header/Header'
 
 import styles from './Contact.module.css'
 function Contact() {
   return (
     <section className={styles.homeSectionContact}>
+      <Header />
       <h2 className={styles.homeSectionContactTitle}>Contact Me</h2>
       <p className={styles.homeSectionContactDescription}>
         If you have any questions, feel free to get in touch. I'd love to hear

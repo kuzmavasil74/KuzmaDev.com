@@ -1,18 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import styles from './Footer.module.css'
 
 function Footer() {
   return (
     <footer className={styles.footerContainer}>
-      <div className={styles.footerLogo}>
-        <img
-          src="/images/KuzmaDevComLogo.svg"
-          alt="KuzmaDev Logo"
-          width="80px"
-          className={styles.footerLogoImage}
-        />
-      </div>
+      <h3 className={styles.footerTitle}>© 2024 Vasyl Kuzma</h3>
     </footer>
   )
 }
