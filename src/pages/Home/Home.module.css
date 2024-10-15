@@ -176,3 +176,117 @@
     font-size: 20px;
   }
 }
+
+/* */
+/* Загальні стилі для великих екранів */
+.homeContent {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeTitle,
+.homeSpanTitle {
+  font-size: 65px;
+}
+
+.homeDescription,
+.homeSpanDescription {
+  font-size: 30px;
+}
+
+/* Для екранів до 1024px */
+@media (max-width: 1024px) {
+  .homeContent {
+    font-size: 8vmin;
+  }
+
+  .homeTitle,
+  .homeSpanTitle {
+    font-size: 50px;
+  }
+
+  .homeDescription,
+  .homeSpanDescription {
+    font-size: 25px;
+  }
+
+  .homeNavSocialMedia {
+    left: -80%;
+  }
+
+  .homeContactsNav {
+    right: -80%;
+  }
+}
+
+/* Для екранів до 768px */
+@media (max-width: 768px) {
+  .homeContent {
+    top: 30%;
+    font-size: 10vmin;
+  }
+
+  .homeTitle,
+  .homeSpanTitle {
+    font-size: 40px;
+  }
+
+  .homeDescription,
+  .homeSpanDescription {
+    font-size: 22px;
+  }
+
+  .homeNavSocialMedia {
+    flex-direction: row;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .homeContactsNav {
+    flex-direction: row;
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Для екранів до 480px (мобільні пристрої) */
+@media (max-width: 480px) {
+  .homeContent {
+    top: 15%;
+    font-size: 12vmin;
+  }
+
+  .homeTitle,
+  .homeSpanTitle {
+    font-size: 30px;
+  }
+
+  .homeDescription,
+  .homeSpanDescription {
+    font-size: 18px;
+  }
+
+  .homeNavSocialMediaListItemLinkImg,
+  .homeContactsNavListItemLinkImg {
+    width: 15px;
+  }
+
+  .homeNavSocialMedia,
+  .homeContactsNav {
+    flex-direction: row;
+    left: 5%;
+    right: 0;
+    bottom: 5%;
+  }
+
+  .homeNavSocialMediaList,
+  .homeContactsNavList {
+    margin-left: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
