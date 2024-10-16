@@ -1,5 +1,4 @@
 .headerContainer {
-  position: fixed;
   height: 40px;
   width: 100%;
   display: flex;
@@ -197,5 +196,10 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     letter-spacing: 10px;
+  }
+}
+@media (min-width: 1070px) {
+  .headerContainer {
+    position: fixed;
   }
 }
