@@ -91,6 +91,7 @@
   justify-content: center;
   list-style: none;
   padding: 0;
+  gap: 10px;
 }
 
 .headerNavListItem {
@@ -100,6 +101,40 @@
   text-align: center;
   text-decoration: none;
   opacity: 0.7;
+}
+
+.headerNavListItemLink {
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  opacity: 0.7;
+  transition: all 0.4s ease;
+  text-align: center;
+  z-index: 2;
+}
+.headerNavListItemLink::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 50px;
+  font-weight: 400;
+  font-family: 'Poppins';
+  color: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  letter-spacing: 50px;
+  transition: transform 1s ease, opacity 0.1s ease, letter-spacing 1s ease;
+}
+
+.headerNavListItemLink:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: 10px;
 }
 
 /* Close Button */
@@ -121,17 +156,6 @@
 
 /* Desktop Styles */
 @media (min-width: 768px) {
-  .headerNav {
-    display: none;
-  }
-
-  .headerNavList {
-    display: flex;
-    gap: 10px;
-    padding: 0;
-    list-style: none;
-  }
-
   .headerNavListItemLink {
     position: relative;
     padding: 10px;

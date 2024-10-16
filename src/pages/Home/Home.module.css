@@ -1,3 +1,4 @@
+/* Базові стилі для всіх екранів */
 .home {
   background: url('/public/images/bg_2.png') no-repeat right center;
   background-size: 180px;
@@ -6,12 +7,8 @@
   background-repeat: no-repeat;
   background-color: #171717;
 }
-@keyframes scale {
-  0% {
-    transform: scale(0.6);
-  }
-}
 #canvas {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -34,108 +31,31 @@
   font-size: 8vmin;
 }
 
-.homeTitle {
-  font-family: poppins;
-  font-weight: 700;
-  font-size: 65px;
-  opacity: 0.7;
-}
+.homeTitle,
 .homeSpanTitle {
   font-family: poppins;
   font-weight: 700;
-  font-size: 65px;
-  color: #ef5555;
   opacity: 0.7;
 }
-.homeDescription {
-  font-family: poppins;
-  font-weight: 500;
-  font-size: 30px;
-  opacity: 0.7;
-}
+
+.homeDescription,
 .homeSpanDescription {
   font-family: poppins;
   font-weight: 500;
-  font-size: 30px;
-  color: #ef5555;
   opacity: 0.7;
 }
 
-@media (max-width: 1024px) {
-  .homeContent {
-    font-size: 10vmin;
-    top: 20%;
-    left: 50%;
-  }
-
-  .homeTitle {
-    font-size: 50px;
-  }
-
-  .homeSpanTitle {
-    font-size: 50px;
-  }
-
-  .homeDescription {
-    font-size: 25px;
-  }
-
-  .homeSpanDescription {
-    font-size: 25px;
-  }
-}
-/* Social Media */
-.homeNavSocialMedia {
-  position: absolute;
-  top: 0%;
-  left: -95%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 20px;
-  right: 20px;
-}
-.homeNavSocialMediaList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-.homeNavSocialMediaListItem {
-  list-style: none;
-  margin: 0 10px;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: 0.5s;
-}
-.homeNavSocialMediaListItem:hover {
-  opacity: 1;
-}
-.homeNavSocialMediaListItemLink {
-  text-decoration: none;
-}
-.homeNavSocialMediaListItemLinkImg {
-  width: 20px;
-}
-/* Contacts Nav */
+.homeNavSocialMedia,
 .homeContactsNav {
   position: absolute;
-  top: 75%;
-  right: -65%;
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 20px;
-  left: 20px;
-}
-.homeContactsNavList {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 15px;
 }
+
+.homeNavSocialMediaListItem,
 .homeContactsNavListItem {
   list-style: none;
   margin: 0 10px;
@@ -143,85 +63,78 @@
   opacity: 0.7;
   transition: 0.5s;
 }
+
+.homeNavSocialMediaListItem:hover,
 .homeContactsNavListItem:hover {
   opacity: 1;
 }
+
+.homeNavSocialMediaListItemLink,
 .homeContactsNavListItemLink {
   text-decoration: none;
 }
+
+.homeNavSocialMediaListItemLinkImg,
 .homeContactsNavListItemLinkImg {
   width: 20px;
-}
-/* Медіа-запити для мобільних пристроїв */
-@media (max-width: 768px) {
-  .homeContent {
-    top: 10%;
-    left: 50%;
-    font-size: 12vmin;
-  }
-
-  .homeTitle {
-    font-size: 35px;
-  }
-
-  .homeSpanTitle {
-    font-size: 35px;
-  }
-
-  .homeDescription {
-    font-size: 20px;
-  }
-
-  .homeSpanDescription {
-    font-size: 20px;
-  }
-}
-
-/* */
-/* Загальні стилі для великих екранів */
-.homeContent {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.homeTitle,
-.homeSpanTitle {
-  font-size: 65px;
-}
-
-.homeDescription,
-.homeSpanDescription {
-  font-size: 30px;
-}
-
-/* Для екранів до 1024px */
-@media (max-width: 1024px) {
-  .homeContent {
-    font-size: 8vmin;
-  }
-
-  .homeTitle,
-  .homeSpanTitle {
-    font-size: 50px;
-  }
-
-  .homeDescription,
-  .homeSpanDescription {
-    font-size: 25px;
-  }
-
-  .homeNavSocialMedia {
-    left: -80%;
-  }
-
-  .homeContactsNav {
-    right: -80%;
-  }
 }
 
 /* Для екранів до 768px */
 @media (max-width: 768px) {
+  #canvas {
+    display: none;
+  }
+  .home {
+    height: 100vh;
+    background-size: 100px;
+  }
+  .homeContent {
+    top: 15%;
+    font-size: 12vmin;
+  }
+
+  .homeTitle,
+  .homeSpanTitle {
+    font-size: 30px;
+  }
+
+  .homeDescription,
+  .homeSpanDescription {
+    font-size: 18px;
+  }
+
+  .homeNavSocialMedia {
+    flex-direction: row;
+    left: 5%;
+    bottom: 20%;
+  }
+  .homeNavSocialMediaList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .homeContactsNav {
+    left: 50%;
+    bottom: 5%;
+  }
+
+  .homeContactsNavList {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .homeNavSocialMediaListItemLinkImg,
+  .homeContactsNavListItemLinkImg {
+    width: 15px;
+  }
+}
+
+/* Для екранів від 769px до 1023px */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .home {
+    background-size: 100px;
+  }
+
   .homeContent {
     top: 30%;
     font-size: 10vmin;
@@ -239,54 +152,76 @@
 
   .homeNavSocialMedia {
     flex-direction: row;
-    bottom: 10px;
-    left: 50%;
+    bottom: 25%;
+    left: 8%;
     transform: translateX(-50%);
   }
-
+  .homeNavSocialMediaList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
   .homeContactsNav {
+    bottom: 15px;
+    left: 40%;
+  }
+
+  .homeContactsNavList {
+    display: flex;
     flex-direction: row;
-    top: auto;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
-/* Для екранів до 480px (мобільні пристрої) */
-@media (max-width: 480px) {
-  .homeContent {
-    top: 15%;
-    font-size: 12vmin;
+/* Для екранів від 1024px */
+@media (min-width: 1024px) {
+  #canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .home {
+    background: url('/public/images/bg_2.png') no-repeat right center;
+    background-size: 180px;
+    background-attachment: fixed;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-color: #171717;
   }
 
   .homeTitle,
   .homeSpanTitle {
-    font-size: 30px;
+    font-size: 65px;
   }
 
   .homeDescription,
   .homeSpanDescription {
-    font-size: 18px;
+    font-size: 30px;
   }
 
-  .homeNavSocialMediaListItemLinkImg,
-  .homeContactsNavListItemLinkImg {
-    width: 15px;
+  .homeNavSocialMedia {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    top: 0;
   }
-
-  .homeNavSocialMedia,
-  .homeContactsNav {
-    flex-direction: row;
-    left: 5%;
-    right: 0;
-    bottom: 5%;
-  }
-
-  .homeNavSocialMediaList,
-  .homeContactsNavList {
-    margin-left: 10px;
+  .homeNavSocialMediaList {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+  }
+
+  .homeContactsNav {
+    position: absolute;
+    bottom: 3%;
+    right: 50%;
+  }
+  .homeContactsNavList {
+    display: flex;
+    flex-direction: row;
   }
 }

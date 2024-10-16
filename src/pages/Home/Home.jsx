@@ -17,6 +17,10 @@ function Home() {
   }
 
   useEffect(() => {
+    if (window.innerWidth <= 1024) {
+      return
+    }
+
     const canvasBody = canvasRef.current
     const drawArea = canvasBody.getContext('2d')
 
