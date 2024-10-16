@@ -153,111 +153,157 @@ function About() {
           </li>
         </ul>
       </section>
-      <section id="my-skills" className="skills-section">
+      <section id="my-skills" className={styles.skillssSection}>
         {' '}
-        {/* Заміна class на className */}
-        <h2 className="section-title">My Skills</h2>
-        <div className="skills-container">
-          <div className="skills-category">
-            <h3>Frontend Development</h3>
-            <ul>
-              <li>
-                <strong>React.js</strong>: Building dynamic web applications
-                using React and its ecosystem.
+        <h2 className={styles.skillsSectionTitle}>
+          <span className={styles.skillsSectionTitleSpan}>My</span> Skills
+        </h2>
+        <div className={styles.skillsContainer}>
+          <div className={styles.skillsCategory}>
+            <h3 className={styles.skillsCategoryTitle}>Frontend Development</h3>
+            <ul className={styles.skillsCategoryList}>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  React.js
+                </strong>
+                : Building dynamic web applications using React and its
+                ecosystem.
               </li>
-              <li>
-                <strong>TypeScript</strong>: Ensuring type safety and enhanced
-                code quality.
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  TypeScript
+                </strong>
+                : Ensuring type safety and enhanced code quality.
               </li>
-              <li>
-                <strong>JavaScript (ES6+)</strong>: Mastering modern JavaScript,
-                including async/await and promises.
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  JavaScript (ES6+)
+                </strong>
+                : Mastering modern JavaScript, including async/await and
+                promises.
               </li>
-              <li>
-                <strong>State Management</strong>: Using context, hooks, and
-                state management libraries for efficient data handling.
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  State Management
+                </strong>
+                : Using context, hooks, and state management libraries for
+                efficient data handling.
               </li>
-              <li>
-                <strong>Responsive Design</strong>: Creating mobile-first,
-                adaptive layouts using Flexbox and CSS Grid.
-              </li>
-            </ul>
-          </div>
-
-          <div className="skills-category">
-            <h3>Backend Development</h3>
-            <ul>
-              <li>
-                <strong>Node.js</strong>: Creating server-side logic and
-                handling API requests.
-              </li>
-              <li>
-                <strong>MongoDB</strong>: Designing and managing databases for
-                scalable applications.
-              </li>
-              <li>
-                <strong>REST API</strong>: Developing APIs to integrate frontend
-                with backend.
-              </li>
-              <li>
-                <strong>Authentication</strong>: Implementing user
-                authentication and security measures.
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Responsive Design
+                </strong>
+                : Creating mobile-first, adaptive layouts using Flexbox and CSS
+                Grid.
               </li>
             </ul>
           </div>
 
-          <div className="skills-category">
-            <h3>UI/UX & Web Design</h3>
-            <ul>
-              <li>
-                <strong>UI/UX Design</strong>: Crafting intuitive, user-friendly
-                interfaces.
+          <div className={styles.skillsCategory}>
+            <h3 className={styles.skillsCategoryTitle}>Backend Development</h3>
+            <ul className={styles.skillsCategoryList}>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Node.js
+                </strong>
+                : Creating server-side logic and handling API requests.
               </li>
-              <li>
-                <strong>CSS Animations</strong>: Enhancing user experience with
-                smooth animations and transitions.
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  MongoDB
+                </strong>
+                : Designing and managing databases for scalable applications.
               </li>
-              <li>
-                <strong>Tailwind CSS</strong>: Leveraging utility-first CSS for
-                rapid and responsive design.
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  REST API
+                </strong>
+                : Developing APIs to integrate frontend with backend.
               </li>
-            </ul>
-          </div>
-
-          <div className="skills-category">
-            <h3>Performance Optimization</h3>
-            <ul>
-              <li>
-                <strong>Code Splitting</strong>: Optimizing web performance by
-                lazy loading resources.
-              </li>
-              <li>
-                <strong>Image Optimization</strong>: Reducing load times through
-                image compression and responsive images.
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Authentication
+                </strong>
+                : Implementing user authentication and security measures.
               </li>
             </ul>
           </div>
 
-          <div className="skills-category">
-            <h3>Collaboration & Tools</h3>
-            <ul>
-              <li>
-                <strong>Git/GitHub</strong>: Managing version control and
-                collaborating with teams.
+          <div className={styles.skillsCategory}>
+            <h3 className={styles.skillsCategoryTitle}>UI/UX & Web Design</h3>
+            <ul className={styles.skillsCategoryList}>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  UI/UX Design
+                </strong>
+                : Crafting intuitive, user-friendly interfaces.
               </li>
-              <li>
-                <strong>Task Automation</strong>: Streamlining development
-                workflows using Webpack.
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  CSS Animations
+                </strong>
+                : Enhancing user experience with smooth animations and
+                transitions.
+              </li>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Tailwind CSS
+                </strong>
+                : Leveraging utility-first CSS for rapid and responsive design.
               </li>
             </ul>
           </div>
 
-          <div className="skills-category">
-            <h3>Project Management</h3>
-            <ul>
-              <li>
-                <strong>Deployment</strong>: Deploying applications to platforms
-                like Vercel, ensuring smooth production releases.
+          <div className={styles.skillsCategory}>
+            <h3 className={styles.skillsCategoryTitle}>
+              Performance Optimization
+            </h3>
+            <ul className={styles.skillsCategoryList}>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Code Splitting
+                </strong>
+                : Optimizing web performance by lazy loading resources.
+              </li>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Image Optimization
+                </strong>
+                : Reducing load times through image compression and responsive
+                images.
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.skillsCategory}>
+            <h3 className={styles.skillsCategoryTitle}>
+              Collaboration & Tools
+            </h3>
+            <ul className={styles.skillsCategoryList}>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Git/GitHub
+                </strong>
+                : Managing version control and collaborating with teams.
+              </li>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Task Automation
+                </strong>
+                : Streamlining development workflows using Webpack.
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.skillsCategory}>
+            <h3 className={styles.skillsCategoryTitle}>Project Management</h3>
+            <ul className={styles.skillsCategoryList}>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Deployment
+                </strong>
+                : Deploying applications to platforms like Vercel, ensuring
+                smooth production releases.
               </li>
             </ul>
           </div>
