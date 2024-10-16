@@ -1,5 +1,5 @@
 /* mobile version*/
-@media (max-width: 767px) {
+@media (min-width: 320px) {
   .aboutContainer {
     background-color: #171717;
   }
@@ -13,7 +13,7 @@
     padding: 0 50px 0 50px;
   }
   .aboutSectionAboutTitle {
-    font-size: 45px;
+    font-size: 35px;
     font-family: raleway;
     color: whitesmoke;
     padding: 10px 10px 0 10px;
@@ -56,7 +56,7 @@
     gap: 10px;
   }
   .aboutSectionAboutArticleTitle {
-    font-size: 36px;
+    font-size: 26px;
     text-align: center;
     opacity: 1;
     margin-bottom: 10px;
@@ -86,9 +86,10 @@
     opacity: 1;
   }
   .homeSectionAboutImage {
-    padding: 30px 30px;
+    padding: 35px 35px;
     border-radius: 40px;
     animation: opacity 1.4s ease;
+    max-width: 100%;
   }
   .myServices {
     margin: 0 auto;
@@ -100,7 +101,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 45px;
+    font-size: 35px;
     font-family: raleway;
     color: whitesmoke;
     padding: 0 10px 10px 10px;
@@ -151,12 +152,13 @@
   }
   .serviceCardImage {
     border-radius: 10px;
+    max-width: 100%;
   }
   .serviceCardTitle {
     padding: 10px;
     margin: 5px;
     font-weight: 200;
-    font-size: 36px;
+    font-size: 26px;
   }
   .serviceCardDescription {
     padding: 10px;
@@ -167,7 +169,7 @@
   }
 }
 /* tablet version*/
-@media (min-width: 767px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .aboutContainer {
     background-color: #171717;
   }
@@ -216,11 +218,10 @@
   .aboutSectionAboutArticleContentContainer {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 0 30px 0 30px;
     font-size: 20px;
     font-family: poppins;
     width: 100%;
-    padding: 30px;
     font-weight: 400;
   }
   .aboutSectionAboutArticleContent {
@@ -260,14 +261,18 @@
     opacity: 1;
   }
   .homeSectionAboutImage {
-    padding: 0 30px;
+    padding: 35px 35px;
     border-radius: 40px;
     animation: opacity 1.4s ease;
     width: 450px;
+    max-width: 100%;
   }
   .myServices {
     margin: 0 auto;
-    padding: 0 100px 30px 100px;
+    padding: 0 50px 30px 50px;
+    .myServices {
+      z-index: 100;
+    }
   }
   .servicesTitle {
     height: auto;
@@ -278,9 +283,8 @@
     font-size: 45px;
     font-family: raleway;
     color: whitesmoke;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     padding-bottom: 30px;
-    padding-top: 30px;
     font-weight: 900;
   }
   .servicesTitleSpan {
@@ -325,6 +329,7 @@
   }
   .serviceCardImage {
     border-radius: 10px;
+    max-width: 100%;
   }
   .serviceCardTitle {
     padding: 10px;
@@ -438,6 +443,7 @@
     border-radius: 40px;
     animation: opacity 1.4s ease;
     width: 450px;
+    max-width: 100%;
   }
   .myServices {
     margin: 0 auto;
@@ -504,6 +510,7 @@
   }
   .serviceCardImage {
     border-radius: 10px;
+    max-width: 100%;
   }
   .serviceCardTitle {
     padding: 10px;
