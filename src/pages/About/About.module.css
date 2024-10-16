@@ -1,175 +1,531 @@
-.aboutContainer {
-  background-color: #171717;
-}
-.aboutSectionAbout {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 100px 30px 100px;
-}
-.aboutSectionAboutTitle {
-  font-size: 45px;
-  font-family: raleway;
-  color: whitesmoke;
-  padding: 10px 10px 0 10px;
-  padding-bottom: 10px;
-  margin-top: 60px;
-  font-weight: 900;
-}
-.aboutSectionAboutTitleSpan {
-  color: #c70039;
-}
-.aboutSectionAboutSubtitle {
-  color: whitesmoke;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-  padding: 0 10px 10px 10px;
-}
-.aboutSectionAboutSubtitleSpan {
-  color: #c70039;
-}
-.aboutSectionAboutArticle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: auto;
-  margin-top: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
-  flex-direction: row;
-}
-.aboutSectionAboutArticleContentContainer {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  font-size: 20px;
-  font-family: poppins;
-  width: 50%;
-  padding: 30px;
-  font-weight: 400;
-}
-.aboutSectionAboutArticleContent {
-  display: flex;
-  flex-direction: column;
-  color: whitesmoke;
-  gap: 10px;
-}
-.aboutSectionAboutArticleTitle {
-  font-size: 50px;
-  opacity: 1;
-  margin-bottom: 10px;
-  display: block;
-  text-align: start;
-}
-.aboutSectionAboutArticleSpan {
-  color: #c70039;
-}
-.aboutSectionAboutArticleText {
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.8;
-  text-align: justify;
-}
+/* mobile version*/
+@media (max-width: 767px) {
+  .aboutContainer {
+    background-color: #171717;
+  }
+  .aboutSectionAbout {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 100px 0 100px;
+  }
+  .aboutSectionAboutTitle {
+    font-size: 45px;
+    font-family: raleway;
+    color: whitesmoke;
+    padding: 10px 10px 0 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
+    font-weight: 900;
+  }
+  .aboutSectionAboutTitleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutSubtitle {
+    color: whitesmoke;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+  }
+  .aboutSectionAboutSubtitleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutArticle {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    margin-top: 30px;
+  }
+  .aboutSectionAboutArticleContentContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 0 30px;
+    font-size: 20px;
+    font-family: poppins;
+    font-weight: 400;
+  }
+  .aboutSectionAboutArticleContent {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    gap: 10px;
+  }
+  .aboutSectionAboutArticleTitle {
+    font-size: 36px;
+    text-align: center;
+    opacity: 1;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .aboutSectionAboutArticleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutArticleText {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.8;
+    text-align: justify;
+  }
 
-.downloadButton {
-  margin-top: 20px;
-  background-color: transparent;
-  border: none;
-  color: whitesmoke;
-  opacity: 0.6;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-.downloadButton:hover {
-  opacity: 1;
-}
-.homeSectionAboutImage {
-  padding: 30px;
-  border-radius: 40px;
-  animation: opacity 1.4s ease;
-}
-.myServices {
-  margin: 0 auto;
-  padding: 0 100px 30px 100px;
-}
-.servicesTitle {
-  height: auto;
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-size: 45px;
-  font-family: raleway;
-  color: whitesmoke;
-  padding: 10px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  font-weight: 900;
-}
-.servicesTitleSpan {
-  color: #c70039;
-}
-.servicesList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  list-style: none;
-  color: whitesmoke;
-}
+  .downloadButton {
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  .downloadButton:hover {
+    opacity: 1;
+  }
+  .homeSectionAboutImage {
+    padding: 30px 30px;
+    border-radius: 40px;
+    animation: opacity 1.4s ease;
+  }
+  .myServices {
+    margin: 0 auto;
+    padding: 0 30px 20px 30px;
+  }
+  .servicesTitle {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-family: raleway;
+    color: whitesmoke;
+    padding: 0 10px 10px 10px;
+    padding-bottom: 30px;
 
-.serviceCard {
-  height: 400px;
-  width: 28%;
-  margin: 1.5%;
-  padding: 20px;
-  background-color: #191919;
-  display: inline-block;
-  box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.05);
-  position: relative;
-  text-align: center;
-  z-index: 2;
-  border-radius: 10px;
-  overflow: hidden;
-  animation: opacity 1.4s ease;
+    font-weight: 900;
+  }
+  .servicesTitleSpan {
+    color: #c70039;
+  }
+  .servicesList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    color: whitesmoke;
+  }
+
+  .serviceCard {
+    height: 200px;
+    width: 100%;
+    height: 100%;
+    margin: 1.5%;
+    padding: 10px;
+    background-color: #191919;
+    display: inline-block;
+    box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.05);
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: opacity 1.4s ease;
+  }
+  .serviceCard:hover {
+    cursor: pointer;
+    background: #c70039;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.2);
+  }
+  .serviceCardImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #c70038;
+  }
+  .serviceCardImage {
+    border-radius: 10px;
+  }
+  .serviceCardTitle {
+    padding: 10px;
+    margin: 5px;
+    font-weight: 200;
+    font-size: 36px;
+  }
+  .serviceCardDescription {
+    padding: 10px;
+    margin: 5px;
+    font-weight: 200;
+    font-size: 22px;
+    opacity: 0.7;
+  }
 }
-.serviceCard:hover {
-  cursor: pointer;
-  background: #c70039;
-  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.2);
+/* tablet version*/
+@media (min-width: 767px) and (max-width: 1023px) {
+  .aboutContainer {
+    background-color: #171717;
+  }
+  .aboutSectionAbout {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 100px 30px 100px;
+  }
+  .aboutSectionAboutTitle {
+    font-size: 45px;
+    font-family: raleway;
+    color: whitesmoke;
+    padding: 10px 10px 0 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
+    font-weight: 900;
+  }
+  .aboutSectionAboutTitleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutSubtitle {
+    color: whitesmoke;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+  }
+  .aboutSectionAboutSubtitleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutArticle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .aboutSectionAboutArticleContentContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 20px;
+    font-family: poppins;
+    width: 100%;
+    padding: 30px;
+    font-weight: 400;
+  }
+  .aboutSectionAboutArticleContent {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    gap: 10px;
+  }
+  .aboutSectionAboutArticleTitle {
+    font-size: 50px;
+    opacity: 1;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+  }
+  .aboutSectionAboutArticleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutArticleText {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.8;
+    text-align: justify;
+  }
+
+  .downloadButton {
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  .downloadButton:hover {
+    opacity: 1;
+  }
+  .homeSectionAboutImage {
+    padding: 0 30px;
+    border-radius: 40px;
+    animation: opacity 1.4s ease;
+    width: 450px;
+  }
+  .myServices {
+    margin: 0 auto;
+    padding: 0 100px 30px 100px;
+  }
+  .servicesTitle {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-family: raleway;
+    color: whitesmoke;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-weight: 900;
+  }
+  .servicesTitleSpan {
+    color: #c70039;
+  }
+  .servicesList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    color: whitesmoke;
+  }
+
+  .serviceCard {
+    height: 400px;
+    width: 40%;
+    margin: 1.5%;
+    padding: 20px;
+    background-color: #191919;
+    display: inline-block;
+    box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.05);
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: opacity 1.4s ease;
+  }
+  .serviceCard:hover {
+    cursor: pointer;
+    background: #c70039;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.2);
+  }
+  .serviceCardImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #c70038;
+  }
+  .serviceCardImage {
+    border-radius: 10px;
+  }
+  .serviceCardTitle {
+    padding: 10px;
+    margin: 5px;
+    font-weight: 200;
+    font-size: 36px;
+  }
+  .serviceCardDescription {
+    padding: 10px;
+    margin: 5px;
+    font-weight: 200;
+    font-size: 22px;
+    opacity: 0.7;
+  }
 }
-.serviceCardImageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border-radius: 20px;
-  background-color: #c70038;
-}
-.serviceCardImage {
-  border-radius: 10px;
-}
-.serviceCardTitle {
-  padding: 10px;
-  margin: 5px;
-  font-weight: 200;
-  font-size: 36px;
-}
-.serviceCardDescription {
-  padding: 10px;
-  margin: 5px;
-  font-weight: 200;
-  font-size: 22px;
-  opacity: 0.7;
+/* desctope version*/
+@media (min-width: 1024px) {
+  .aboutContainer {
+    background-color: #171717;
+  }
+  .aboutSectionAbout {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 100px 30px 100px;
+  }
+  .aboutSectionAboutTitle {
+    font-size: 45px;
+    font-family: raleway;
+    color: whitesmoke;
+    padding: 10px 10px 0 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
+    font-weight: 900;
+  }
+  .aboutSectionAboutTitleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutSubtitle {
+    color: whitesmoke;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+  }
+  .aboutSectionAboutSubtitleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutArticle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-direction: row;
+  }
+  .aboutSectionAboutArticleContentContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 20px;
+    font-family: poppins;
+    width: 50%;
+    padding: 30px;
+    font-weight: 400;
+  }
+  .aboutSectionAboutArticleContent {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    gap: 10px;
+  }
+  .aboutSectionAboutArticleTitle {
+    font-size: 50px;
+    opacity: 1;
+    margin-bottom: 10px;
+    display: block;
+    text-align: start;
+  }
+  .aboutSectionAboutArticleSpan {
+    color: #c70039;
+  }
+  .aboutSectionAboutArticleText {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.8;
+    text-align: justify;
+  }
+
+  .downloadButton {
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  .downloadButton:hover {
+    opacity: 1;
+  }
+  .homeSectionAboutImage {
+    padding: 30px;
+    border-radius: 40px;
+    animation: opacity 1.4s ease;
+    width: 450px;
+  }
+  .myServices {
+    margin: 0 auto;
+    padding: 0 100px 30px 100px;
+  }
+  .servicesTitle {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-family: raleway;
+    color: whitesmoke;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-weight: 900;
+  }
+  .servicesTitleSpan {
+    color: #c70039;
+  }
+  .servicesList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    color: whitesmoke;
+  }
+
+  .serviceCard {
+    height: 400px;
+    width: 28%;
+    margin: 1.5%;
+    padding: 20px;
+    background-color: #191919;
+    display: inline-block;
+    box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.05);
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: opacity 1.4s ease;
+  }
+  .serviceCard:hover {
+    cursor: pointer;
+    background: #c70039;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.2);
+  }
+  .serviceCardImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #c70038;
+  }
+  .serviceCardImage {
+    border-radius: 10px;
+  }
+  .serviceCardTitle {
+    padding: 10px;
+    margin: 5px;
+    font-weight: 200;
+    font-size: 36px;
+  }
+  .serviceCardDescription {
+    padding: 10px;
+    margin: 5px;
+    font-weight: 200;
+    font-size: 22px;
+    opacity: 0.7;
+  }
 }

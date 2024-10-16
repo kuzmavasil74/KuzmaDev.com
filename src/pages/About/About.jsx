@@ -57,7 +57,6 @@ function About() {
             className={styles.homeSectionAboutImage}
             src="/images/About Me.jpg"
             alt="Avatar_Kuzma_Vasyl.png"
-            width={450}
           />
         </article>
       </section>
