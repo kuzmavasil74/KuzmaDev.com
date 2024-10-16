@@ -13,7 +13,7 @@
 .headerLogoLink {
   position: relative;
   top: 16px;
-  left: 1rem;
+  left: 0;
 }
 
 .headerLogoImage {
@@ -33,7 +33,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: 20px 50px;
+  padding: 20px 0 20px 50px;
 }
 
 .headerMenuButton.hidden {
@@ -156,6 +156,11 @@
 
 /* Desktop Styles */
 @media (min-width: 768px) {
+  .headerLogoLink {
+    position: relative;
+    top: 16px;
+    left: 1rem;
+  }
   .headerNavListItemLink {
     position: relative;
     padding: 10px;
