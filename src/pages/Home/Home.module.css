@@ -44,7 +44,10 @@
   font-weight: 500;
   opacity: 0.7;
 }
-
+.homeSpanTitle,
+.homeSpanDescription {
+  color: #c70039;
+}
 .homeNavSocialMedia,
 .homeContactsNav {
   position: absolute;
@@ -89,7 +92,7 @@
     background-size: 100px;
   }
   .homeContent {
-    top: 15%;
+    top: 40%;
     font-size: 12vmin;
   }
 
