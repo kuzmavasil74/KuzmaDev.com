@@ -1,0 +1,52 @@
+.blogSection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 50px 50px 0 50px;
+}
+.blogHeader {
+}
+.blogSectionTitle {
+  font-family: raleway;
+  color: whitesmoke;
+  margin-top: 30px;
+  font-size: 35px;
+  font-weight: 900;
+  padding: 10px;
+}
+.blogSectionTitleDesc {
+  color: whitesmoke;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  padding: 0 10px;
+}
+.blogSectionTitleDesc {
+  color: whitesmoke;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  padding: 0 10px;
+}
+.blogSectionListItemDescSpan {
+  color: #c70039;
+}
+.blogSectionList {
+  list-style: none;
+}
+.blogSectionListItem {
+}
+.blogSectionListItemImgCard {
+  width: 90%;
+}
+.blogSectionListItemImg {
+}
+.blogSectionListItemText {
+}
+.blogSectionListItemTextTitle {
+}
+.blogSectionListItemTextDesc {
+}

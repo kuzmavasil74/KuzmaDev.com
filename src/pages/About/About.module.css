@@ -148,6 +148,10 @@
     border-radius: 10px;
     overflow: hidden;
     animation: opacity 1.4s ease;
+    transition: background-color 0.3s ease;
+  }
+  .serviceCard:hover {
+    background-color: #c70038;
   }
 
   .serviceCardImageContainer {
