@@ -20,7 +20,7 @@ function Blog() {
         </div>
         <ul className={styles.blogSectionList}>
           <li className={styles.blogSectionListItem}>
-            <a href="" alt="">
+            <a href={`/blog/$/{blog.slug}`} alt="">
               <div className={styles.blogSectionListItemImgCard}>
                 <img
                   className={styles.blogSectionListItemImg}

@@ -9,10 +9,10 @@ import {
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
-import Projects from './pages/Projects/Projects.jsx'
 import Contact from './pages/Contact/Contact.jsx'
 import Blog from './pages/Blog/Blog.jsx'
 import Portfolio from './pages/Portfolio/Portfolio.jsx'
+import BlogPost from './components/BlogPost/BlogPost.jsx'
 
 import './styles/animation.css'
 
@@ -20,13 +20,9 @@ function App() {
   const location = useLocation()
   const nodeRef = createRef()
   useEffect(() => {
-    if (location.pathname === '/about') {
-      document.body.classList.remove('no-scroll')
-    } else if (location.pathname === '/portfolio') {
-      document.body.classList.remove('no-scroll')
-    } else if (location.pathname === '/contact') {
-      document.body.classList.remove('no-scroll')
-    } else if (location.pathname === '/blog') {
+    const noScrollPaths = ['/about', '/portfolio', '/contact', '/blog']
+
+    if (noScrollPaths.includes(location.pathname)) {
       document.body.classList.remove('no-scroll')
     } else {
       document.body.classList.add('no-scroll')
@@ -48,6 +44,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<Home />}></Route>
           </Routes>
         </div>
