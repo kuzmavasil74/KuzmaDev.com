@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { blogData } from '../../data/blogPosts.js'
+import data from '../../data/blogPosts.json'
 
 const BlogPost = () => {
   const { slug } = useParams()
@@ -14,7 +14,7 @@ const BlogPost = () => {
     <div className="blog-post">
       <h1>{post.title}</h1>
       <p>{post.date}</p>
-      <img src={post.imageUrl} alt={post.title} />
+      {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
       <div
         className="blog-content"
         dangerouslySetInnerHTML={{ __html: post.content }}
