@@ -1,0 +1,62 @@
+{
+  "projects": [
+    {
+      "title": "WebStudio",
+      "imageUrl": "/images/projects/webstudio.jpg",
+      "url": "https://kuzmavasil74.github.io/goit-markup-hw-08/",
+      "description": "A professional website for a WebStudio company featuring responsive design, transform effects, and modal windows.",
+      "role": "Developer",
+      "type": "Individual project"
+    },
+    {
+      "title": "Best Sellers Books",
+      "imageUrl": "/images/projects/bestsellersbooks.jpg",
+      "url": "https://volodymyrkozel.github.io/renderrangers/",
+      "description": "A dynamic website for a book product company with adaptive design, animations, modal windows, and a burger menu for ordering.",
+      "role": "Scrum Master, Developer of the All Categories Section",
+      "type": "Command project"
+    },
+    {
+      "title": "Movie Search",
+      "imageUrl": "/images/projects/moviesearch.jpg",
+      "url": "https://goit-react-hw-05-azure-mu.vercel.app/",
+      "description": "A movie search application with routing to search for movies by title. Implemented advanced state management and optimized API interactions.",
+      "role": "Sole Developer",
+      "type": "Individual project"
+    },
+    {
+      "title": "Contacts Book",
+      "imageUrl": "/images/projects/contactsbooks.jpg",
+      "url": "https://goit-react-hw-08-lac-chi.vercel.app/",
+      "description": "A \"Contact Book\" application with registration and login functionalities, managing a private collection of contacts. Utilized secure authentication and optimized data handling.",
+      "role": "Developer",
+      "type": "Individual project"
+    },
+    {
+      "title": "Trecker of Water",
+      "imageUrl": "/images/projects/trackerofwater.jpg",
+      "url": "https://team-project-watter-app.vercel.app/",
+      "description": "A \"Contact Book\" application with registration and login functionalities, managing a private collection of contacts. Utilized secure authentication and optimized data handling.",
+      "role": "Developer",
+      "type": "Command project"
+    }
+  ],
+  "pro_bono_projects": [
+    {
+      "title": "TaisiyaStyle",
+      "imageUrl": "/images/projects/taisiyastyle.jpg",
+      "url": "https://taisiyastyle.vercel.app/",
+      "description": "Developed TaisiyaStyle.com, a personal website for a hairdresser using React, featuring responsive design and an intuitive booking form. Currently working on the backend with MongoDB to enable appointment scheduling.",
+      "role": "Developer",
+      "type": "Individual project"
+    },
+    {
+      "title": "Sweet-Pop",
+      "imageUrl": "/images/projects/white_phone.png",
+      "url": "https://velykobrat.github.io/Sweet-Pop/",
+      "description": "Developed and implemented a landing page for a game using HTML, CSS (Sass), and JavaScript. Collaborated with a team to create an attractive design and user-friendly interface. Optimized the site for loading speed and responsiveness across various devices.",
+      "role": "Developer",
+      "type": "Command project"
+    }
+  ]
+}
