@@ -28,20 +28,26 @@ function Portfolio() {
                 alt={item.title}
               />
             </div>
-            <strong
-              className={styles.portfolioContentProjectsListItemLinkTitle}
+            <div
+              className={
+                styles.portfolioContentProjectsListItemLinkDescContainer
+              }
             >
-              {item.title}
-            </strong>
-            <p className={styles.portfolioContentProjectsListItemDesc}>
-              {item.description}
-            </p>
-            <p className={styles.portfolioContentProjectsListItemRole}>
-              <strong>Role:</strong> {item.role}
-            </p>
-            <p className={styles.portfolioContentProjectsListItemType}>
-              <strong>Type:</strong> {item.type}
-            </p>
+              <strong
+                className={styles.portfolioContentProjectsListItemLinkTitle}
+              >
+                {item.title}
+              </strong>
+              <p className={styles.portfolioContentProjectsListItemDesc}>
+                {item.description}
+              </p>
+              <p className={styles.portfolioContentProjectsListItemRole}>
+                <strong>Role:</strong> {item.role}
+              </p>
+              <p className={styles.portfolioContentProjectsListItemType}>
+                <strong>Type:</strong> {item.type}
+              </p>
+            </div>
             <a
               href={item.url}
               className={styles.portfolioContentProjectsListItemLink}

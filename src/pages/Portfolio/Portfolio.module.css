@@ -45,7 +45,8 @@
     justify-content: center;
   }
   .portfolioContentProjectsListItemLinkTitle {
-    margin: 10px 0 5px 0;
+    color: #c70039;
+    display: block;
   }
   .portfolioContentProjectsListItemDesc {
     color: whitesmoke;
@@ -100,5 +101,14 @@
   .portfolioContentProjectsListItemImg {
     width: 40%;
     height: auto;
+  }
+  .portfolioContentProjectsListItemLinkDescContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolioContentProjectsListItemLinkTitle {
+    padding: 10px 0 10px 0;
+    margin: 0 auto;
   }
 }
