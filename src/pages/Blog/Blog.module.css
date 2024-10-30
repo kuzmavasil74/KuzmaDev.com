@@ -35,6 +35,7 @@
     color: #c70039;
   }
   .blogSectionList {
+    margin-bottom: 10px;
     list-style: none;
   }
   .blogSectionListItem {
@@ -44,6 +45,7 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
+    border-radius: 10px;
   }
   .blogSectionListItem a {
     text-decoration: none;
@@ -103,6 +105,19 @@
     height: 85%;
     padding-top: 20px;
     letter-spacing: 2px;
+  }
+  .blogSectionListItemTextButton {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+  }
+  .blogSectionListItemTextButton:hover {
+    background-color: #c70039;
+    opacity: 0.9;
+    color: whitesmoke;
+    transition: transform 0.3s ease-in-out;
   }
 }
 @media (min-width: 768px) {

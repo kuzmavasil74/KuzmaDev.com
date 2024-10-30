@@ -20,12 +20,13 @@ function App() {
   const location = useLocation()
   const nodeRef = createRef()
   useEffect(() => {
-    const noScrollPaths = ['/about', '/portfolio', '/contact', '/blog']
+    const noScrollPaths = ['/']
+    const shouldDisableScroll = noScrollPaths.includes(location.pathname)
 
-    if (noScrollPaths.includes(location.pathname)) {
-      document.body.classList.remove('no-scroll')
-    } else {
+    if (shouldDisableScroll) {
       document.body.classList.add('no-scroll')
+    } else {
+      document.body.classList.remove('no-scroll')
     }
   }, [location])
 
@@ -44,7 +45,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
-            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="*" element={<Home />}></Route>
           </Routes>
         </div>

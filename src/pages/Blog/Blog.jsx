@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import data from '../../data/blogPosts.json'
 
 import styles from './Blog.module.css'
+import { Link } from 'react-router-dom'
 
 function Blog() {
   return (
@@ -26,7 +27,7 @@ function Blog() {
                 <img
                   className={styles.blogSectionListItemImg}
                   src={blogs.imageUrl}
-                  alt={blogs.slug}
+                  alt={blogs.title}
                 />
                 <p className={styles.blogSectionListItemImgDate}>
                   {blogs.date}
@@ -39,6 +40,11 @@ function Blog() {
                 <p className={styles.blogSectionListItemTextDesc}>
                   {blogs.shortContent}
                 </p>
+                <Link to={`/blog/${blogs.id}`}>
+                  <button className={styles.blogSectionListItemTextButton}>
+                    Read more
+                  </button>
+                </Link>
               </div>
             </li>
           ))}

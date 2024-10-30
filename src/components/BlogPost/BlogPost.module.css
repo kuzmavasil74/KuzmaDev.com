@@ -1,0 +1,101 @@
+@media (min-width: 320px) {
+  .blogPost {
+    padding: 10px;
+  }
+  .blogPostBackButton {
+    display: block;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+  }
+  .blogPostBackButton:hover {
+    background-color: #c70039;
+    opacity: 0.9;
+    color: whitesmoke;
+    transition: transform 0.3s ease-in-out;
+  }
+  .blogPostSectionListItemImgCard {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+  .blogPostSectionListItemImg {
+    height: 100%;
+    width: 100%;
+    transition: all 0.65s ease;
+  }
+  .blogPostSectionListItemImgDate {
+    background: #c70039;
+    position: absolute;
+    left: 0;
+    bottom: 2%;
+    color: whitesmoke;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    font-family: poppins;
+    padding: 3px;
+    width: 35%;
+    height: auto;
+  }
+  .blogPostSectionListItemText {
+    margin: 10px 0 10px 0;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-family: poppins;
+    color: whitesmoke;
+    background-color: #000000;
+    transition: transform 0.3s ease-in-out;
+  }
+  .blogPostSectionListItemTextTitle {
+    position: relative;
+    font-size: 20px;
+    font-weight: 200;
+    height: 15%;
+    padding-top: 10px;
+
+    letter-spacing: 1px;
+    opacity: 0.9;
+    transition: transform 0.3s ease-in-out;
+  }
+  .blogPostSectionListItemTextDesc {
+    font-size: 14px;
+    opacity: 0.7;
+    font-weight: 200;
+    text-align: justify;
+    height: 85%;
+    padding-top: 20px;
+    letter-spacing: 2px;
+    padding: 10px;
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+  .blogPostSectionListItemImgCard {
+    display: flex;
+    justify-content: center;
+  }
+  .blogPostSectionListItemImg {
+    width: 40%;
+    height: 40%;
+  }
+  .blogPostSectionListItemImgDate {
+    bottom: 0%;
+    left: 30%;
+    width: 10%;
+  }
+  .blogPostSectionListItemText {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .blogPostSectionListItemTextTitle {
+    margin-bottom: 10px;
+  }
+}
