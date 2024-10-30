@@ -1,5 +1,6 @@
 @media (min-width: 320px) {
   .blogPost {
+    margin-top: 25px;
     padding: 10px;
   }
   .blogPostBackButton {
