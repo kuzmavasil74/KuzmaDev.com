@@ -28,16 +28,11 @@ function Portfolio() {
                 alt={item.title}
               />
             </div>
-            <a
-              href={item.url}
-              className={styles.portfolioContentProjectsListItemLink}
+            <strong
+              className={styles.portfolioContentProjectsListItemLinkTitle}
             >
-              <strong
-                className={styles.portfolioContentProjectsListItemLinkTitle}
-              >
-                {item.title}
-              </strong>
-            </a>
+              {item.title}
+            </strong>
             <p className={styles.portfolioContentProjectsListItemDesc}>
               {item.description}
             </p>
@@ -47,6 +42,14 @@ function Portfolio() {
             <p className={styles.portfolioContentProjectsListItemType}>
               <strong>Type:</strong> {item.type}
             </p>
+            <a
+              href={item.url}
+              className={styles.portfolioContentProjectsListItemLink}
+            >
+              <button className={styles.portfolioContentProjectsListItemButton}>
+                View Projects
+              </button>
+            </a>
           </li>
         ))}
       </ul>
@@ -68,16 +71,11 @@ function Portfolio() {
                 alt={item.title}
               />
             </div>
-            <a
-              href={item.url}
-              className={styles.portfolioContentProjectsListItemLink}
+            <strong
+              className={styles.portfolioContentProjectsListItemLinkTitle}
             >
-              <strong
-                className={styles.portfolioContentProjectsListItemLinkTitle}
-              >
-                {item.title}
-              </strong>
-            </a>
+              {item.title}
+            </strong>
             <p className={styles.portfolioContentProjectsListItemDesc}>
               {item.description}
             </p>
@@ -87,6 +85,14 @@ function Portfolio() {
             <p className={styles.portfolioContentProjectsListItemType}>
               <strong>Type:</strong> {item.type}
             </p>
+            <a
+              href={item.url}
+              className={styles.portfolioContentProjectsListItemLink}
+            >
+              <button className={styles.portfolioContentProjectsListItemButton}>
+                View Projects
+              </button>
+            </a>
           </li>
         ))}
       </ul>

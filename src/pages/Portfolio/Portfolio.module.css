@@ -64,14 +64,31 @@
   }
   .portfolioContentProBonoTitle {
     font-family: poppins;
-    color: whitesmoke;
+    color: rgba(245, 245, 245, 0.9);
     text-align: center;
-    opacity: 0.9;
     font-size: 22px;
   }
   .portfolioContentProBonoTitleSpan {
     color: #c70039;
     opacity: 0.9;
+  }
+  .portfolioContentProBonoList {
+    padding-top: 15px;
+  }
+  .portfolioContentProjectsListItemButton {
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 5px;
+    background: none;
+    cursor: pointer;
+    border: 1px solid #c70039;
+    color: #c70039;
+    border-radius: 4px;
+  }
+  .portfolioContentProjectsListItemButton:hover {
+    background: #c70039;
+    color: rgba(245, 245, 245, 0.9);
+    transition: transform 0.5s ease;
   }
 }
 @media (min-width: 1024px) {
