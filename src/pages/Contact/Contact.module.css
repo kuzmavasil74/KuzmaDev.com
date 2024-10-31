@@ -1,30 +1,90 @@
-.contactSection {
-  padding: 0 10px 0 10px;
-}
-.contactHeader {
-  display: flex;
-  flex-direction: column;
-}
-.contactTitle {
-  font-family: raleway;
-  color: whitesmoke;
-  padding: 10px;
-  margin-top: 30px;
-  font-size: 45px;
-  padding-top: 60px;
-  margin: 0 auto;
-}
-.contactTitleSpan {
-  color: #c70039;
-}
-.contactSubtitle {
-  font-family: poppins;
-  font-size: 18px;
-  color: whitesmoke;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-.contactSubtitleSpan {
-  color: #c70039;
+@media (min-width: 320px) {
+  .contactSection {
+    padding: 0 10px 0 10px;
+  }
+  .contactHeader {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactTitle {
+    font-family: raleway;
+    color: whitesmoke;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 45px;
+    padding-top: 60px;
+    margin: 0 auto;
+  }
+  .contactTitleSpan {
+    color: #c70039;
+  }
+  .contactSubtitle {
+    font-family: poppins;
+    font-size: 18px;
+    color: whitesmoke;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .contactSubtitleSpan {
+    color: #c70039;
+  }
+  .contactFormik {
+  }
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .contactFormTitle {
+    font-size: 22px;
+    font-family: poppins;
+    font-weight: 400;
+    color: whitesmoke;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .contactFormField {
+    width: 90%;
+    padding: 10px 20px;
+    margin: 14px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: whitesmoke;
+    font-family: poppins;
+    background: #050505;
+  }
+  .contactFieldMessage {
+    width: 90%;
+    padding: 10px 20px;
+    margin: 15px;
+    height: 140px;
+    border-radius: 8px;
+    outline: none;
+    background: #050505;
+    border: none;
+    color: whitesmoke;
+    font-family: poppins;
+    font-size: 16px;
+  }
+  .contactFormButton {
+    margin-bottom: 20px;
+    padding: 8px 24px;
+    font-family: poppins;
+    font-size: 20px;
+    color: whitesmoke;
+    opacity: 0.8;
+    margin: 20px;
+    background: #c70039;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+  }
 }
