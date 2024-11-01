@@ -93,16 +93,16 @@
     background-color: transparent;
     padding: 10px;
     text-align: center;
-    border: 3px solid #c70039;
-    border-radius: 10px;
-    color: whitesmoke;
-    opacity: 0.6;
+    border: solid 1px #c70039;
+    border-radius: 8px;
+    color: #c70039;
     cursor: pointer;
     transition: opacity 0.3s ease;
   }
 
   .downloadButton:hover {
-    opacity: 1;
+    color: whitesmoke;
+    background-color: #c70039;
   }
 
   .homeSectionAboutImage {

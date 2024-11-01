@@ -81,6 +81,24 @@
 .homeContactsNavListItemLinkImg {
   width: 20px;
 }
+.homeButton {
+  margin-bottom: 20px;
+  padding: 8px 24px;
+  font-family: poppins;
+  font-size: 20px;
+  color: #c70039;
+  border: solid 1px #c70039;
+  opacity: 0.8;
+  margin: 20px;
+  background: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+.homeButton:hover {
+  background: #c70039;
+  color: whitesmoke;
+}
 
 /* Для екранів до 768px */
 @media (max-width: 768px) {

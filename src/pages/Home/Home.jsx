@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styles from './Home.module.css'
 import Header from '../../components/Header/Header'
+import { Link } from 'react-router-dom'
 
 function Home() {
   const canvasRef = useRef(null)
@@ -133,6 +134,9 @@ function Home() {
             Frontend Developer
           </span>
         </p>
+        <Link to={`/contact`}>
+          <button className={styles.homeButton}>Contact me</button>
+        </Link>
       </div>
       <nav className={styles.homeNavSocialMedia}>
         <ul className={styles.homeNavSocialMediaList}>

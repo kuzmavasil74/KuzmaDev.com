@@ -29,8 +29,7 @@
   .contactSubtitleSpan {
     color: #c70039;
   }
-  .contactFormik {
-  }
+
   .contactForm {
     display: flex;
     flex-direction: column;
@@ -78,13 +77,17 @@
     padding: 8px 24px;
     font-family: poppins;
     font-size: 20px;
-    color: whitesmoke;
+    color: #c70039;
     opacity: 0.8;
     margin: 20px;
-    background: #c70039;
+    background: none;
     cursor: pointer;
-    border: none;
+    border: solid 1px #c70039;
     border-radius: 8px;
     transition: all 0.4s ease;
+  }
+  .contactFormButton:hover {
+    background: #c70039;
+    color: whitesmoke;
   }
 }

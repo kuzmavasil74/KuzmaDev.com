@@ -109,9 +109,11 @@
   .blogSectionListItemTextButton {
     margin-top: 10px;
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 8px;
+    background-color: transparent;
     cursor: pointer;
-    border: none;
+    border: solid 1px #c70039;
+    color: #c70039;
   }
   .blogSectionListItemTextButton:hover {
     background-color: #c70039;
