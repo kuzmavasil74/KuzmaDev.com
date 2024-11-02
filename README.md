@@ -1,20 +1,53 @@
-# KuzmaDev.com
-Це особистий сайт-портфоліо, створений для демонстрації моїх навичок як Frontend-розробника, прикладів проектів, досвіду роботи та контактної інформації.
+# KuzmaDev Website
 
-Цей сайт надає можливість потенційним роботодавцям та клієнтам дізнатися про мої навички та бачення у сфері Frontend-розробки, а також ознайомитися з виконаними проектами.
+This project is the frontend for the KuzmaDev.com website, which includes a contact form allowing users to send messages directly to the owner.
 
-Технології
-У проекті використані такі технології:
+## Table of Contents
 
-React для побудови інтерфейсу
-TypeScript для типізації коду
-CSS Modules для ізольованої стилізації компонентів
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [License](#license)
 
-Функціонал
-Адаптивний дизайн – сайт виглядає коректно на різних пристроях
-Інтерактивне меню навігації
-Сторінка "Про мене" – містить коротку біографію та професійний шлях
-Портфоліо проектів – демонстрація основних проектів з описом та посиланнями
-Контактна інформація – швидкий доступ до контактів та соціальних мереж
+## Requirements
 
+- Node.js (version 14 or higher)
+- npm (version 6 or higher)
 
+## Installation
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/yourusername/KuzmaDev.com.front-end.git
+Navigate to the project directory:
+
+bash
+Copy code
+cd KuzmaDev.com.front-end
+Install dependencies:
+
+bash
+Copy code
+npm install
+
+### Usage
+Start the development server:
+
+bash
+Copy code
+npm start
+The website will run on http://localhost:3000.
+
+### Features
+Responsive design for mobile and desktop views
+Contact form to submit inquiries
+Integration with a backend API to send emails
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Replacements:
+
+Make sure to replace `yourusername` with your GitHub username in the `git clone` command. Adjust any details under the Features section to reflect the specific functionalities of your frontend if needed.
