@@ -23,19 +23,19 @@ This project is the frontend for the KuzmaDev.com website, which includes a cont
    git clone https://github.com/yourusername/KuzmaDev.com.front-end.git
 Navigate to the project directory:
 
-```bash
+bash
 Copy code
 cd KuzmaDev.com.front-end
 Install dependencies:
 
-```bash
+bash
 Copy code
 npm install
 
 ### Usage
 Start the development server:
 
-```bash
+bash
 Copy code
 npm start
 The website will run on http://localhost:3000.
