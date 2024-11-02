@@ -90,4 +90,7 @@
     background: #c70039;
     color: whitesmoke;
   }
+  .contactError {
+    color: whitesmoke;
+  }
 }

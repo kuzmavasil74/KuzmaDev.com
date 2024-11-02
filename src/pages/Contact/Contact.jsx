@@ -49,7 +49,11 @@ function Contact() {
               placeholder="Name"
               className={styles.contactFormField}
             />
-            <ErrorMessage name="name" component="div" className="error" />
+            <ErrorMessage
+              name="name"
+              component="div"
+              className={styles.contactError}
+            />
 
             <Field
               type="email"
@@ -57,7 +61,11 @@ function Contact() {
               placeholder="Email"
               className={styles.contactFormField}
             />
-            <ErrorMessage name="email" component="div" className="error" />
+            <ErrorMessage
+              name="email"
+              component="div"
+              className={styles.contactError}
+            />
 
             <Field
               type="text"
@@ -65,7 +73,11 @@ function Contact() {
               placeholder="subject"
               className={styles.contactFormField}
             />
-            <ErrorMessage name="subject" component="div" className="error" />
+            <ErrorMessage
+              name="subject"
+              component="div"
+              className={styles.contactError}
+            />
 
             <Field
               as="textarea"
@@ -73,7 +85,11 @@ function Contact() {
               placeholder="message"
               className={styles.contactFieldMessage}
             />
-            <ErrorMessage name="message" component="div" className="error" />
+            <ErrorMessage
+              name="message"
+              component="div"
+              className={styles.contactError}
+            />
             <button type="submit" className={styles.contactFormButton}>
               Submit
             </button>
