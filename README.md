@@ -23,9 +23,8 @@ This project is the frontend for the KuzmaDev.com website, which includes a cont
    git clone https://github.com/yourusername/KuzmaDev.com.front-end.git
 Navigate to the project directory:
 
-bash
-Copy code
-cd KuzmaDev.com.front-end
+```bash
+   cd KuzmaDev.com.front-end
 Install dependencies:
 
 bash
