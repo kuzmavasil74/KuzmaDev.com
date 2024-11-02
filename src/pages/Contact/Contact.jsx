@@ -10,7 +10,7 @@ function Contact() {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       const response = await fetch(
-        'https://jsonplaceholder.typicode.com/posts',
+        'https://kuzmadev-com-back-end.onrender.com/api/contact',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
