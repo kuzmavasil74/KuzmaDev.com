@@ -5,19 +5,12 @@ import { ErrorMessage, Form, Field, Formik } from 'formik'
 import { validationSchema } from '../../utills/validationSchema.js'
 
 import styles from './Contact.module.css'
+import { sendContactForm } from '../../utills/api.js'
 
 function Contact() {
   const handleSubmit = async (values, { resetForm }) => {
     try {
-      const response = await fetch(
-        'https://kuzmadev-com-back-end.onrender.com/api/contact',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(values),
-        }
-      )
-
+      const response = await sendContactForm(values)
       if (response.ok) {
         alert('Your message has been sent!')
         resetForm()
