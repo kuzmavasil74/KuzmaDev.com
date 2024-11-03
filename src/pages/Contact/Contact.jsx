@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import { ErrorMessage, Form, Field, Formik } from 'formik'
@@ -8,7 +8,9 @@ import styles from './Contact.module.css'
 import { sendContactForm } from '../../utills/api.js'
 
 function Contact() {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
   const handleSubmit = async (values, { resetForm }) => {
+    setIsFormSubmitted(true)
     try {
       const response = await sendContactForm(values)
       if (response.ok) {
@@ -20,6 +22,8 @@ function Contact() {
     } catch (error) {
       console.error('Error:', error)
       alert('Failed to send message.')
+    } finally {
+      setIsFormSubmitted(false)
     }
   }
 
@@ -38,7 +42,6 @@ function Contact() {
         initialValues={{ name: '', email: '', subject: '', message: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
-        className={styles.contactFormik}
       >
         {() => (
           <Form className={styles.contactForm}>
@@ -70,7 +73,7 @@ function Contact() {
             <Field
               type="text"
               name="subject"
-              placeholder="subject"
+              placeholder="Subject"
               className={styles.contactFormField}
             />
             <ErrorMessage
@@ -82,7 +85,7 @@ function Contact() {
             <Field
               as="textarea"
               name="message"
-              placeholder="message"
+              placeholder="Message"
               className={styles.contactFieldMessage}
             />
             <ErrorMessage
@@ -90,8 +93,12 @@ function Contact() {
               component="div"
               className={styles.contactError}
             />
-            <button type="submit" className={styles.contactFormButton}>
-              Submit
+            <button
+              type="submit"
+              className={styles.contactFormButton}
+              disabled={isFormSubmitted}
+            >
+              {isFormSubmitted ? 'Sending...' : 'Send'}
             </button>
           </Form>
         )}
