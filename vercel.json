@@ -1,8 +1,30 @@
 {
+  "redirects": [
+    {
+      "source": "http://www.kuzma-dev.eu/:path*",
+      "destination": "https://kuzma-dev.eu/:path*",
+      "permanent": true
+    },
+    {
+      "source": "http://kuzma-dev.eu/:path*",
+      "destination": "https://kuzma-dev.eu/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://www.kuzma-dev.eu/:path*",
+      "destination": "https://kuzma-dev.eu/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://kuzma-dev-com.vercel.app/:path*",
+      "destination": "https://kuzma-dev.eu/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "./index.html"
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ]
 }
