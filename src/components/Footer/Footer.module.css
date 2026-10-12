@@ -1,12 +1,38 @@
 .footerContainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  gap: 6px;
+  padding: 16px;
   background-color: black;
   color: #fff;
 }
 
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footerLink {
+  color: whitesmoke;
+  opacity: 0.75;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footerLink:hover,
+.footerLink:focus-visible {
+  color: #c70039;
+  opacity: 1;
+}
+
 .footerTitle {
+  margin: 0;
   font-size: 12px;
 }

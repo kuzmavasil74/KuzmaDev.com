@@ -3,16 +3,83 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import styles from './About.module.css'
 
-function About() {
-  const handleDownload = (fileName) => {
-    const link = document.createElement('a')
-    link.href = `/Resume/${fileName}`
-    link.setAttribute('download', fileName)
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+const experience = [
+  {
+    title: 'Full-stack Developer',
+    place: 'SANJO, Czech Republic',
+    period: '2026 - present',
+    text: 'Built BuildTrack (work hours, crews and payroll) and Tool Tracker (QR-based tool inventory) as installable web apps used on construction sites.',
+  },
+  {
+    title: 'Freelance Developer',
+    place: 'TaisiyaStyle, Prague',
+    period: '2024 - present',
+    text: 'Website, online booking, Telegram bot and automatic reminders for a hair salon.',
+  },
+  {
+    title: 'Operator - Inspector - Master - Electrotechnician',
+    place: 'Novares Group, Czech Republic',
+    period: '2020 - 2023',
+    text: 'Progressed through quality control, team management and electrical maintenance.',
+  },
+  {
+    title: 'Operator',
+    place: 'Yazaki LLC, Ukraine',
+    period: '2018',
+    text: 'Kept assembly lines running, performed quality checks.',
+  },
+  {
+    title: 'Junior Lecturer',
+    place: 'Uzhhorod National University',
+    period: '2015 - 2019',
+    text: 'Assisted with lectures, guided research and led practical lab sessions.',
+  },
+]
 
+const education = [
+  {
+    title: 'Fullstack Developer Course',
+    place: 'GoIT',
+    period: '2023 - 2024',
+    text: 'HTML, CSS, JavaScript, React, TypeScript, Node.js and MongoDB. Certificate issued by the CEO of GoIT.',
+  },
+  {
+    title: 'Ph.D. in Physics',
+    place: 'Uzhhorod National University',
+    period: '2012 - 2015',
+    text: 'Postgraduate research in theoretical and experimental physics.',
+  },
+  {
+    title: "Bachelor's and Master's in Physics",
+    place: 'Uzhhorod National University',
+    period: '2007 - 2012',
+    text: 'From classical mechanics to quantum physics.',
+  },
+]
+
+const languages = [
+  ['Ukrainian', 'Native'],
+  ['Russian', 'B2'],
+  ['English', 'A2'],
+  ['Czech', 'A2'],
+]
+
+function Timeline({ items }) {
+  return (
+    <ol className={styles.timeline}>
+      {items.map((item) => (
+        <li key={item.title + item.period} className={styles.timelineItem}>
+          <p className={styles.timelinePeriod}>{item.period}</p>
+          <h4 className={styles.timelineTitle}>{item.title}</h4>
+          <p className={styles.timelinePlace}>{item.place}</p>
+          <p className={styles.timelineText}>{item.text}</p>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
+function About() {
   return (
     <div className={styles.aboutContainer}>
       <Header />
@@ -31,32 +98,39 @@ function About() {
           <div className={styles.aboutSectionAboutArticleContentContainer}>
             <div className={styles.aboutSectionAboutArticleContent}>
               <h3 className={styles.aboutSectionAboutArticleTitle}>
-                I'm creative{' '}
+                I'm a creative{' '}
                 <span className={styles.aboutSectionAboutArticleSpan}>
                   web developer{' '}
                 </span>
-                based in Praha, Czech Republic
+                based in Prague, Czech Republic
               </h3>
               <p className={styles.aboutSectionAboutArticleText}>
-                I'm a Frontend Developer specializing in React.js, with a
-                passion for building scalable web applications. I focus on
-                delivering clean, efficient code and great user experiences.
+                I'm a Full-stack Developer specializing in React and Node.js.
+                I build real products for real businesses: work and payroll
+                tracking for a construction company, a tool inventory system
+                with QR scanning, and online booking with a Telegram bot for a
+                hair salon. Before web development I earned a Ph.D. in Physics,
+                which taught me to break hard problems into small, testable
+                steps.
               </p>
             </div>
             <div className={styles.resumeButton}>
-              <button
-                type="button"
+              <a
                 className={styles.downloadButton}
-                onClick={() => handleDownload('Vasyl_Kuzma_Resume.pdf')}
+                href="/Vasyl_Kuzma_CV.pdf"
+                download="Vasyl_Kuzma_CV.pdf"
               >
                 Download CV
-              </button>
+              </a>
             </div>
           </div>
           <img
             className={styles.homeSectionAboutImage}
-            src="/images/About Me.jpg"
-            alt="Avatar_Kuzma_Vasyl.png"
+            src="/images/about-me.jpg"
+            alt="Vasyl Kuzma"
+            width="800"
+            height="774"
+            loading="lazy"
           />
         </article>
       </section>
@@ -210,9 +284,16 @@ function About() {
               </li>
               <li className={styles.skillsCategoryListItem}>
                 <strong className={styles.skillsCategoryListItemStrong}>
-                  MongoDB
+                  MongoDB & PostgreSQL
                 </strong>
                 : Designing and managing databases for scalable applications.
+              </li>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  Telegram Bots
+                </strong>
+                : Notifications, reminders and booking management through the
+                Telegram Bot API.
               </li>
               <li className={styles.skillsCategoryListItem}>
                 <strong className={styles.skillsCategoryListItemStrong}>
@@ -302,9 +383,39 @@ function About() {
                 <strong className={styles.skillsCategoryListItemStrong}>
                   Deployment
                 </strong>
-                : Deploying applications to platforms like Vercel, ensuring
-                smooth production releases.
+                : Deploying applications to Vercel, Railway and Render, with
+                CI on GitHub Actions.
               </li>
+              <li className={styles.skillsCategoryListItem}>
+                <strong className={styles.skillsCategoryListItemStrong}>
+                  PWA & i18n
+                </strong>
+                : Installable apps that work on a phone, in up to five
+                languages.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className={styles.journey}>
+        <h2 className={styles.skillsSectionTitle}>
+          <span className={styles.skillsSectionTitleSpan}>My</span> Journey
+        </h2>
+        <div className={styles.journeyColumns}>
+          <div>
+            <h3 className={styles.journeyTitle}>Experience</h3>
+            <Timeline items={experience} />
+          </div>
+          <div>
+            <h3 className={styles.journeyTitle}>Education</h3>
+            <Timeline items={education} />
+            <h3 className={styles.journeyTitle}>Languages</h3>
+            <ul className={styles.languages}>
+              {languages.map(([name, level]) => (
+                <li key={name} className={styles.languagesItem}>
+                  {name} <span className={styles.languagesLevel}>{level}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

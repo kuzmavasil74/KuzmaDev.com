@@ -28,6 +28,8 @@ function Blog() {
                   className={styles.blogSectionListItemImg}
                   src={blogs.imageUrl}
                   alt={blogs.title}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className={styles.blogSectionListItemImgDate}>
                   {blogs.date}
@@ -40,10 +42,11 @@ function Blog() {
                 <p className={styles.blogSectionListItemTextDesc}>
                   {blogs.shortContent}
                 </p>
-                <Link to={`/blog/${blogs.id}`}>
-                  <button className={styles.blogSectionListItemTextButton}>
-                    Read more
-                  </button>
+                <Link
+                  to={`/blog/${blogs.id}`}
+                  className={styles.blogSectionListItemTextButton}
+                >
+                  Read more
                 </Link>
               </div>
             </li>

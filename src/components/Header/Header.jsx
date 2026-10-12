@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const closeButtonRef = useRef(null)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -13,25 +12,14 @@ function Header() {
     setIsMenuOpen(false)
   }
 
-  useEffect(() => {
-    if (isMenuOpen && closeButtonRef.current) {
-      closeButtonRef.current.addEventListener('click', closeMenu)
-    }
-    return () => {
-      if (closeButtonRef.current) {
-        closeButtonRef.current.removeEventListener('click', closeMenu)
-      }
-    }
-  }, [isMenuOpen])
-
   return (
     <header className={styles.headerContainer}>
       <Link to="/" className={styles.headerLogoLink}>
         <img
           src="/images/KuzmaDevComLogo.png"
-          alt="KuzmaDevLogo"
-          width="60px"
-          height="60px"
+          alt="KuzmaDev home"
+          width="60"
+          height="60"
           className={styles.headerLogoImage}
         />
       </Link>
@@ -43,6 +31,8 @@ function Header() {
           isMenuOpen ? styles.hidden : ''
         }`}
         onClick={toggleMenu}
+        aria-label="Open menu"
+        aria-expanded={isMenuOpen}
       >
         <span className={styles.firstBurgerLine}></span>
         <span className={styles.secondBurgerLine}></span>
@@ -54,7 +44,7 @@ function Header() {
             <Link
               to="/"
               className={styles.headerNavListItemLink}
-              onClick={toggleMenu}
+              onClick={closeMenu}
               data-text="Home"
             >
               Home
@@ -64,7 +54,7 @@ function Header() {
             <Link
               to="/about"
               className={styles.headerNavListItemLink}
-              onClick={toggleMenu}
+              onClick={closeMenu}
               data-text="About"
             >
               About
@@ -74,7 +64,7 @@ function Header() {
             <Link
               to="/blog"
               className={styles.headerNavListItemLink}
-              onClick={toggleMenu}
+              onClick={closeMenu}
               data-text="Blog"
             >
               Blog
@@ -84,7 +74,7 @@ function Header() {
             <Link
               to="/portfolio"
               className={styles.headerNavListItemLink}
-              onClick={toggleMenu}
+              onClick={closeMenu}
               data-text="Portfolio"
             >
               Portfolio
@@ -94,7 +84,7 @@ function Header() {
             <Link
               to="/contact"
               className={styles.headerNavListItemLink}
-              onClick={toggleMenu}
+              onClick={closeMenu}
               data-text="Contact"
             >
               Contact
@@ -102,11 +92,12 @@ function Header() {
           </li>
         </ul>
         <button
-          ref={closeButtonRef}
+          type="button"
+          onClick={closeMenu}
           className={styles.headerCloseButton}
-          aria-label="Close Menu"
+          aria-label="Close menu"
         >
-          <img src="/images/close.png" alt="close" width="40px" height="40px" />
+          <img src="/images/close.png" alt="" width="40" height="40" />
         </button>
       </nav>
     </header>

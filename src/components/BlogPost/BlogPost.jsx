@@ -4,17 +4,18 @@ import data from '../../data/blogPosts.json'
 
 import Header from '../Header/Header.jsx'
 import Footer from '../Footer/Footer.jsx'
+import NotFound from '../../pages/NotFound/NotFound.jsx'
 
 import styles from './BlogPost.module.css'
 
 const BlogPost = () => {
   const { id } = useParams()
+  const navigate = useNavigate()
   const blog = data.find((blog) => blog.id === parseInt(id))
 
   if (!blog) {
-    return <div>Post not found</div>
+    return <NotFound />
   }
-  const navigate = useNavigate()
   const handleGoBack = () => {
     navigate(-1)
   }
@@ -29,6 +30,7 @@ const BlogPost = () => {
               className={styles.blogPostSectionListItemImg}
               src={blog.imageUrl}
               alt={blog.title}
+              decoding="async"
             />
             <p className={styles.blogPostSectionListItemImgDate}>{blog.date}</p>
           </div>

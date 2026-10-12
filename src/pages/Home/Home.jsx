@@ -96,11 +96,12 @@ function Home() {
       for (let i = 0; i < opts.particleAmount; i++) {
         particles.push(new Particle())
       }
-      window.requestAnimationFrame(loop)
+      frameId = window.requestAnimationFrame(loop)
     }
 
+    let frameId
     const loop = () => {
-      window.requestAnimationFrame(loop)
+      frameId = window.requestAnimationFrame(loop)
       drawArea.clearRect(0, 0, w, h)
       particles.forEach((particle) => {
         particle.update()
@@ -116,13 +117,14 @@ function Home() {
 
     return () => {
       window.removeEventListener('resize', resizeReset)
+      window.cancelAnimationFrame(frameId)
     }
   }, [])
 
   return (
     <div className={styles.home}>
       <Header />
-      <canvas ref={canvasRef} id="canvas"></canvas>
+      <canvas ref={canvasRef} id="canvas" aria-hidden="true"></canvas>
       <div className={styles.homeContent}>
         <h1 className={styles.homeTitle}>
           Vasyl <span className={styles.homeSpanTitle}>Kuzma</span>
@@ -131,11 +133,11 @@ function Home() {
           I am a{' '}
           <span className={styles.homeSpanDescription}>
             {' '}
-            Frontend Developer
+            Full-stack Developer
           </span>
         </p>
-        <Link to={`/contact`}>
-          <button className={styles.homeButton}>Contact me</button>
+        <Link to="/contact" className={styles.homeButton}>
+          Contact me
         </Link>
       </div>
       <nav className={styles.homeNavSocialMedia}>

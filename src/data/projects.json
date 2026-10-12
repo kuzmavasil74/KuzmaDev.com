@@ -1,62 +1,87 @@
 {
+  "commercial_projects": [
+    {
+      "title": "Sanjo BuildTrack",
+      "imageUrl": "/images/projects/buildtrack.jpg",
+      "url": "https://buildtrack-frontend-ten.vercel.app",
+      "description": "Daily work tracking for a construction company: who worked on which site, for how many hours, in which crew, and what everyone is owed. Monthly payroll in five currencies with PDF/CSV export, receipt photos stored in S3, QR check-in for crews and an installable PWA in five languages.",
+      "stack": "React 19, Vite, Tailwind CSS 4, react-i18next, Node.js, Express, PostgreSQL, MongoDB, AWS S3, Railway, GitHub Actions",
+      "role": "Full-stack Developer",
+      "type": "Commercial project for SANJO (Czech Republic)"
+    },
+    {
+      "title": "Sanjo Tool Tracker",
+      "imageUrl": "/images/projects/tooltracker.jpg",
+      "url": "https://tool-tracker-app-production.up.railway.app",
+      "description": "Inventory system that answers at any moment which tool exists, where it is and who has it. Storekeepers issue and return tools by scanning a QR code with a phone; every movement goes into one event log. Includes bookings without overlaps, signed handover PDFs, GPS locations on a map, Telegram and web-push notifications, loss reports and CSV/Excel/PDF exports in Ukrainian, Czech and English.",
+      "stack": "React, Node.js, Express, PWA, Leaflet, Telegram Bot API, Web Push, Railway",
+      "role": "Full-stack Developer",
+      "type": "Commercial project for SANJO (Czech Republic)"
+    },
+    {
+      "title": "TaisiyaStyle",
+      "imageUrl": "/images/projects/taisiyastyle.jpg",
+      "url": "https://www.taisiiastyle.cz/",
+      "description": "Website and online booking for a hairdresser in Prague. Clients book an appointment on the site, the owner manages bookings through a Telegram bot, and a separate worker sends day and hour reminders and asks for reviews after the visit. The API is covered by unit and integration tests.",
+      "stack": "React, Node.js, Express, MongoDB, JWT, Telegram Bot API, Railway",
+      "role": "Full-stack Developer",
+      "type": "Client project"
+    }
+  ],
   "projects": [
     {
-      "title": "WebStudio",
-      "imageUrl": "/images/projects/webstudio.jpg",
-      "url": "https://kuzmavasil74.github.io/goit-markup-hw-08/",
-      "description": "A professional website for a WebStudio company featuring responsive design, transform effects, and modal windows.",
+      "title": "Tracker of Water",
+      "imageUrl": "/images/projects/trackerofwater.jpg",
+      "url": "https://team-project-watter-app.vercel.app/",
+      "description": "Team application for tracking daily water intake: personal daily norm, consumption log and monthly statistics, with registration, login and profile settings.",
+      "stack": "React, Node.js, Express, MongoDB, JWT, Cloudinary, Swagger",
+      "role": "Backend Developer: user password reset flow",
+      "type": "Team project"
+    },
+    {
+      "title": "Contacts Book",
+      "imageUrl": "/images/projects/contactsbooks.jpg",
+      "url": "https://goit-react-hw-08-lac-chi.vercel.app/",
+      "description": "A contact book with registration and login that manages a private collection of contacts for every user.",
+      "stack": "React, Redux Toolkit, Redux Persist, React Router, Formik, Yup, Axios",
       "role": "Developer",
+      "type": "Individual project"
+    },
+    {
+      "title": "Movie Search",
+      "imageUrl": "/images/projects/moviesearch.jpg",
+      "url": "https://goit-react-hw-05-azure-mu.vercel.app/",
+      "description": "A movie search application with routing: search by title, trending movies, details, cast and reviews loaded from the TMDB API.",
+      "stack": "React, React Router, Axios",
+      "role": "Sole Developer",
       "type": "Individual project"
     },
     {
       "title": "Best Sellers Books",
       "imageUrl": "/images/projects/bestsellersbooks.jpg",
       "url": "https://volodymyrkozel.github.io/renderrangers/",
-      "description": "A dynamic website for a book product company with adaptive design, animations, modal windows, and a burger menu for ordering.",
-      "role": "Scrum Master, Developer of the All Categories Section",
-      "type": "Command project"
-    },
-    {
-      "title": "Movie Search",
-      "imageUrl": "/images/projects/moviesearch.jpg",
-      "url": "https://goit-react-hw-05-azure-mu.vercel.app/",
-      "description": "A movie search application with routing to search for movies by title. Implemented advanced state management and optimized API interactions.",
-      "role": "Sole Developer",
-      "type": "Individual project"
-    },
-    {
-      "title": "Contacts Book",
-      "imageUrl": "/images/projects/contactsbooks.jpg",
-      "url": "https://goit-react-hw-08-lac-chi.vercel.app/",
-      "description": "A \"Contact Book\" application with registration and login functionalities, managing a private collection of contacts. Utilized secure authentication and optimized data handling.",
-      "role": "Developer",
-      "type": "Individual project"
-    },
-    {
-      "title": "Trecker of Water",
-      "imageUrl": "/images/projects/trackerofwater.jpg",
-      "url": "https://team-project-watter-app.vercel.app/",
-      "description": "A \"Contact Book\" application with registration and login functionalities, managing a private collection of contacts. Utilized secure authentication and optimized data handling.",
-      "role": "Developer",
-      "type": "Command project"
-    }
-  ],
-  "pro_bono_projects": [
-    {
-      "title": "TaisiyaStyle",
-      "imageUrl": "/images/projects/taisiyastyle.jpg",
-      "url": "https://taisiyastyle.vercel.app/",
-      "description": "Developed TaisiyaStyle.com, a personal website for a hairdresser using React, featuring responsive design and an intuitive booking form. Currently working on the backend with MongoDB to enable appointment scheduling.",
-      "role": "Developer",
-      "type": "Individual project"
+      "description": "A dynamic website for a book shop with adaptive design, animations, modal windows and a burger menu.",
+      "stack": "JavaScript, HTML, CSS, Axios, Swiper, Vite",
+      "role": "Scrum Master, developer of the All Categories section",
+      "type": "Team project"
     },
     {
       "title": "Sweet-Pop",
-      "imageUrl": "/images/projects/white_phone.png",
+      "imageUrl": "/images/projects/sweetpop.jpg",
       "url": "https://velykobrat.github.io/Sweet-Pop/",
-      "description": "Developed and implemented a landing page for a game using HTML, CSS (Sass), and JavaScript. Collaborated with a team to create an attractive design and user-friendly interface. Optimized the site for loading speed and responsiveness across various devices.",
+      "description": "Landing page for a game, built with a team: attractive design, user-friendly interface, fast loading and responsive layout across devices.",
+      "stack": "HTML, Sass, JavaScript",
       "role": "Developer",
-      "type": "Command project"
+      "type": "Team project"
+    },
+    {
+      "title": "WebStudio",
+      "imageUrl": "/images/projects/webstudio.jpg",
+      "url": "https://kuzmavasil74.github.io/goit-markup-hw-08/",
+      "description": "A website for a web studio company with responsive design, transform effects and modal windows.",
+      "stack": "HTML, SCSS",
+      "role": "Developer",
+      "type": "Individual project"
     }
   ]
 }

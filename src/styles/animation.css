@@ -14,3 +14,8 @@
   opacity: 0;
   transition: opacity 0.5s ease-in;
 }
+
+.page-loading {
+  min-height: 100vh;
+  background-color: #171717;
+}

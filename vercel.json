@@ -1,29 +1,24 @@
 {
-  "redirects": [
+  "headers": [
     {
-      "source": "http://www.kuzma-dev.eu/:path*",
-      "destination": "https://kuzma-dev.eu/:path*",
-      "permanent": true
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
-      "source": "http://kuzma-dev.eu/:path*",
-      "destination": "https://kuzma-dev.eu/:path*",
-      "permanent": true
-    },
-    {
-      "source": "https://www.kuzma-dev.eu/:path*",
-      "destination": "https://kuzma-dev.eu/:path*",
-      "permanent": true
-    },
-    {
-      "source": "https://kuzma-dev-com.vercel.app/:path*",
-      "destination": "https://kuzma-dev.eu/:path*",
-      "permanent": true
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800" }
+      ]
     }
   ],
   "rewrites": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]

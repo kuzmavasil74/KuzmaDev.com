@@ -4,104 +4,91 @@ import Footer from '../../components/Footer/Footer.jsx'
 import data from '../../data/projects.json'
 
 import styles from './Portfolio.module.css'
+
+function ProjectCard({ project }) {
+  return (
+    <li className={styles.card}>
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noreferrer"
+        className={styles.cardImageLink}
+        aria-label={`Open ${project.title}`}
+      >
+        <img
+          className={styles.cardImage}
+          src={project.imageUrl}
+          alt={`${project.title} screenshot`}
+          loading="lazy"
+          decoding="async"
+          width="1200"
+          height="625"
+        />
+      </a>
+      <div className={styles.cardBody}>
+        <h3 className={styles.cardTitle}>{project.title}</h3>
+        <p className={styles.cardType}>{project.type}</p>
+        <p className={styles.cardDesc}>{project.description}</p>
+        <p className={styles.cardMeta}>
+          <strong>Role:</strong> {project.role}
+        </p>
+        <ul className={styles.cardStack}>
+          {project.stack.split(', ').map((tech) => (
+            <li key={tech} className={styles.cardStackItem}>
+              {tech}
+            </li>
+          ))}
+        </ul>
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noreferrer"
+          className={styles.cardButton}
+        >
+          View project
+        </a>
+      </div>
+    </li>
+  )
+}
+
+function ProjectSection({ title, accent, projects }) {
+  return (
+    <section className={styles.section}>
+      <h2 className={styles.sectionTitle}>
+        {title} <span className={styles.accent}>{accent}</span>
+      </h2>
+      <ul className={styles.grid}>
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </ul>
+    </section>
+  )
+}
+
 function Portfolio() {
   return (
     <div className={styles.portfolioContainer}>
       <Header />
       <div className={styles.portfolioHeader}>
-        <h2 className={styles.portfolioTitle}>
-          <span className={styles.portfolioTitleSpan}> My</span> portfolio
-        </h2>
-        <h3 className={styles.portfolioSubtitle}>
-          Some Of My <span className={styles.portfolioSubtitleSpan}>Works</span>
-        </h3>
+        <h1 className={styles.portfolioTitle}>
+          <span className={styles.accent}>My</span> portfolio
+        </h1>
+        <p className={styles.portfolioSubtitle}>
+          Some Of My <span className={styles.accent}>Works</span>
+        </p>
       </div>
-      <ul className={styles.portfolioContentProjectsList}>
-        {data.projects.map((item, index) => (
-          <li key={index} className={styles.portfolioContentProjectsListItem}>
-            <div
-              className={styles.portfolioContentProjectsListItemImgContainer}
-            >
-              <img
-                className={styles.portfolioContentProjectsListItemImg}
-                src={item.imageUrl}
-                alt={item.title}
-              />
-            </div>
-            <div
-              className={
-                styles.portfolioContentProjectsListItemLinkDescContainer
-              }
-            >
-              <strong
-                className={styles.portfolioContentProjectsListItemLinkTitle}
-              >
-                {item.title}
-              </strong>
-              <p className={styles.portfolioContentProjectsListItemDesc}>
-                {item.description}
-              </p>
-              <p className={styles.portfolioContentProjectsListItemRole}>
-                <strong>Role:</strong> {item.role}
-              </p>
-              <p className={styles.portfolioContentProjectsListItemType}>
-                <strong>Type:</strong> {item.type}
-              </p>
-            </div>
-            <a
-              href={item.url}
-              className={styles.portfolioContentProjectsListItemLink}
-            >
-              <button className={styles.portfolioContentProjectsListItemButton}>
-                View Projects
-              </button>
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul className={styles.portfolioContentProBonoList}>
-        <h2 className={styles.portfolioContentProBonoTitle}>
-          Pro Bono{' '}
-          <span className={styles.portfolioContentProBonoTitleSpan}>
-            Projects
-          </span>
-        </h2>
-        {data.pro_bono_projects.map((item, index) => (
-          <li key={index} className={styles.portfolioContentProjectsListItem}>
-            <div
-              className={styles.portfolioContentProjectsListItemImgContainer}
-            >
-              <img
-                className={styles.portfolioContentProjectsListItemImg}
-                src={item.imageUrl}
-                alt={item.title}
-              />
-            </div>
-            <strong
-              className={styles.portfolioContentProjectsListItemLinkTitle}
-            >
-              {item.title}
-            </strong>
-            <p className={styles.portfolioContentProjectsListItemDesc}>
-              {item.description}
-            </p>
-            <p className={styles.portfolioContentProjectsListItemRole}>
-              <strong>Role:</strong> {item.role}
-            </p>
-            <p className={styles.portfolioContentProjectsListItemType}>
-              <strong>Type:</strong> {item.type}
-            </p>
-            <a
-              href={item.url}
-              className={styles.portfolioContentProjectsListItemLink}
-            >
-              <button className={styles.portfolioContentProjectsListItemButton}>
-                View Projects
-              </button>
-            </a>
-          </li>
-        ))}
-      </ul>
+      <ProjectSection
+        title="Commercial &"
+        accent="Client Projects"
+        projects={data.commercial_projects}
+      />
+      <ProjectSection
+        title="Study &"
+        accent="Team Projects"
+        projects={data.projects}
+      />
       <Footer />
     </div>
   )

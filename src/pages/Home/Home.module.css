@@ -1,6 +1,6 @@
 /* Базові стилі для всіх екранів */
 .home {
-  background: url('/public/images/bg_2.png') no-repeat right center;
+  background: url('/images/bg_2.png') no-repeat right center;
   background-size: 180px;
   background-attachment: fixed;
   background-position: right bottom;
@@ -82,6 +82,8 @@
   width: 20px;
 }
 .homeButton {
+  display: inline-block;
+  text-decoration: none;
   margin-bottom: 20px;
   padding: 6px 12px;
   font-family: poppins;
@@ -208,7 +210,7 @@
   }
 
   .home {
-    background: url('/public/images/bg_2.png') no-repeat right center;
+    background: url('/images/bg_2.png') no-repeat right center;
     background-size: 180px;
     background-attachment: fixed;
     background-position: right bottom;

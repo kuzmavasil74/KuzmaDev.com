@@ -94,3 +94,19 @@
     color: whitesmoke;
   }
 }
+
+.contactStatus {
+  min-height: 20px;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: rgba(245, 245, 245, 0.7);
+  text-align: center;
+}
+
+.contactStatusSuccess {
+  color: #4caf50;
+}
+
+.contactStatusError {
+  color: #ff6b6b;
+}
