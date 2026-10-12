@@ -59,9 +59,9 @@ const education = [
 
 const languages = [
   ['Ukrainian', 'Native'],
-  ['Russian', 'B2'],
-  ['English', 'A2'],
-  ['Czech', 'A2'],
+  ['Russian', 'B1'],
+  ['English', 'B1'],
+  ['Czech', 'B1'],
 ]
 
 function Timeline({ items }) {
