@@ -7,7 +7,7 @@
       "description": "Daily work tracking for a construction company: who worked on which site, for how many hours, in which crew, and what everyone is owed. Monthly payroll in five currencies with PDF/CSV export, receipt photos stored in S3, QR check-in for crews and an installable PWA in five languages.",
       "stack": "React 19, Vite, Tailwind CSS 4, react-i18next, Node.js, Express, PostgreSQL, MongoDB, AWS S3, Railway, GitHub Actions",
       "role": "Full-stack Developer",
-      "type": "Commercial project for SANJO (Czech Republic)"
+      "type": "Part-time work for SANJO (Czech Republic)"
     },
     {
       "title": "Sanjo Tool Tracker",
@@ -16,7 +16,7 @@
       "description": "Inventory system that answers at any moment which tool exists, where it is and who has it. Storekeepers issue and return tools by scanning a QR code with a phone; every movement goes into one event log. Includes bookings without overlaps, signed handover PDFs, GPS locations on a map, Telegram and web-push notifications, loss reports and CSV/Excel/PDF exports in Ukrainian, Czech and English.",
       "stack": "React, Node.js, Express, PWA, Leaflet, Telegram Bot API, Web Push, Railway",
       "role": "Full-stack Developer",
-      "type": "Commercial project for SANJO (Czech Republic)"
+      "type": "Part-time work for SANJO (Czech Republic)"
     },
     {
       "title": "TaisiyaStyle",

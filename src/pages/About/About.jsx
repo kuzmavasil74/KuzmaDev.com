@@ -5,7 +5,7 @@ import styles from './About.module.css'
 
 const experience = [
   {
-    title: 'Full-stack Developer',
+    title: 'Full-stack Developer (part-time)',
     place: 'SANJO, Czech Republic',
     period: '2026 - present',
     text: 'Built BuildTrack (work hours, crews and payroll) and Tool Tracker (QR-based tool inventory) as installable web apps used on construction sites.',
